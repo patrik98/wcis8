@@ -1,0 +1,23 @@
+{
+  "name": "wcis8-spa",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "run-dev": "webpack serve --mode development",
+    "build-prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.web.fh-kufstein.ac.at/golecpatrik/wcis8-spa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  }
+}

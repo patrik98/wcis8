@@ -1,0 +1,13 @@
+.share-this {
+    display: none;
+}
+body .contact-portlet .contact-name:before {
+    display: none;
+}
+.hide-when-printed{
+    display: none;
+}
+
+.print-faq img{
+    height: auto;
+}
