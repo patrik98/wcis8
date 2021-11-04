@@ -7,18 +7,26 @@
     }
 }
 
-.cls-1 {
-    fill: #cedbef;
-}
+@keyframes hideshow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } 
 
-.cls-2 {
-    fill: #549bd4;
-}
 
 .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
     stroke: #fff;
     stroke-miterlimit: 10;
     stroke-width: 0.25px;
+    animation: hideshow 2s;
+}
+
+.cls-1 {
+    fill: #cedbef;
+    animation: hideshow 7s;
+}
+
+.cls-2 {
+    fill: #549bd4;
 }
 
 .cls-3 {
