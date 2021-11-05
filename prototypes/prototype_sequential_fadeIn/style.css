@@ -1,0 +1,80 @@
+
+
+@media ( max-width: 500px ) {
+    #wcis8 {
+        transform: rotate(90deg);
+        margin: 70px;
+    }
+}
+
+@keyframes hideshow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+} 
+
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+    opacity: 0;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+
+    /*
+        animation-name
+        animation-duration
+        animation-timing-function
+        animation-delay
+        animation-iteration-count
+        animation-direction
+        animation-fill-mode
+        animation-play-state
+    */
+    /* animation: name dur fill-mode -> forwards = retain style of last keyframe (opacity 1) */
+    animation: hideshow 1s forwards;
+}
+
+.cls-1 {
+    fill: #cedbef;
+    /* animation: hideshow 7s; */
+}
+
+.cls-2 {
+    fill: #549bd4;
+    animation-delay: 1s;
+}
+
+.cls-3 {
+    fill: #9babb2;
+    animation-delay: 2s;
+}
+
+.cls-4 {
+    fill: #f1813b;
+    animation-delay: 3s;
+}
+
+.cls-5 {
+    fill: #3e73b7;
+    animation-delay: 4s;
+}
+
+.cls-6 {
+    fill: #fabd22;
+    animation-delay: 5s;
+}
+
+.cls-7 {
+    fill: #49853c;
+    animation-delay: 6s;
+}
+
+.cls-8 {
+    fill: #c7d1d4;
+    animation-delay: 7s;
+}
+
+.cls-9 {
+    fill: #231f20;
+    opacity: 0.4;
+    animation-delay: 8s;
+}
