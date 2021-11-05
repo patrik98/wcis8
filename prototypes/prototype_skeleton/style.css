@@ -30,31 +30,6 @@ path[id='section-']{
     fill: #c7d1d4;
 }
 
-/*Section*/
-#section-1 {
-    fill: #49853c;
-}
-
-#section-2 {
-    fill: #549bd4;
-}
-
-#section-3 {
-    fill: #9babb2;
-}
-
-#section-4 {
-    fill: #3e73b7;
-}
-
-#section-5 {
-    fill: #f1813b;
-}
-
-#section-6 {
-    fill: #fabd22;
-}
-
 .gray-rings {
     fill: #231f20;
     opacity: 0.4;
