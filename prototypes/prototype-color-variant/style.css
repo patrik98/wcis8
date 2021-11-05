@@ -1,0 +1,35 @@
+@media ( max-width: 500px ) {
+    .wcis8 {
+        transform: rotate(90deg);
+        margin: 70px;
+    }
+}
+
+@keyframes hideshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideshow_rings {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+path[id='section-'] {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+}
+
+#background {
+    fill: #cedbef;
+    /* animation: hideshow 7s; */
+}
