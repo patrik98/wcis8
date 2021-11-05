@@ -14,7 +14,7 @@
     }
 }
 
-#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
+path[id='section-']{
     stroke: #fff;
     stroke-miterlimit: 10;
     stroke-width: 0.25px;
@@ -26,10 +26,14 @@
     animation: hideshow 7s;
 }
 
+#section-center {
+    fill: #c7d1d4;
+}
+
+/*Section*/
 #section-1 {
     fill: #49853c;
 }
-
 
 #section-2 {
     fill: #549bd4;
@@ -40,18 +44,14 @@
 }
 
 #section-4 {
-    fill: #c7d1d4;
-}
-
-#section-5 {
     fill: #3e73b7;
 }
 
-#section-6 {
+#section-5 {
     fill: #f1813b;
 }
 
-#section-7 {
+#section-6 {
     fill: #fabd22;
 }
 
