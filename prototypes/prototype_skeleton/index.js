@@ -90,3 +90,13 @@ document.getElementById("section-3").style.fill = wcisContent.rightCircle["secti
 document.getElementById("section-4").style.fill = wcisContent.leftCircle["section-4"].backgroundColor;
 document.getElementById("section-5").style.fill = wcisContent.leftCircle["section-5"].backgroundColor;
 document.getElementById("section-6").style.fill = wcisContent.leftCircle["section-6"].backgroundColor;
+
+window.addEventListener("resize", function() {
+    if (window.screen.width >= 500 ) {
+        document.getElementById("wcis8").style.transform ="rotate(0deg)";
+        document.getElementById("wcis8").style.margin ="70px";
+
+    }else{
+        document.getElementById("wcis8").style.transform ="rotate(90deg)";
+    }
+})
