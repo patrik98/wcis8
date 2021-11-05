@@ -1,102 +1,88 @@
 const wcisContent = {
     "rightCircle": {
         "title": "Development & Engineering",
-        "section-1": {
-            "title": "Advanced Software Engineering & Architecture 1",
-            "backgroundColor": "#49853c"
-        },
-        "section-2": {
-            "title": "Advanced Software Engineering & Architecture 2",
-            "backgroundColor": "#549bd4"
-        },
-        "section-3": {
-            "title": "Advanced Software Engineering & Architecture 3",
-            "backgroundColor": "#9babb2"
-        }
     },
     "leftCircle": {
         "title": "Development & Engineering",
-        "section-4": {
+    },
+    "sections": [
+        {
+            "id": 1,
+            "title": "Advanced Software Engineering & Architecture 1",
+            "description": "Some text",
+            "backgroundColor": "#49853c",
+        },
+        {
+            "id": 2,
+            "title": "Advanced Software Engineering & Architecture 2",
+            "description": "Some text",
+            "backgroundColor": "#549bd4"
+        },
+        {
+            "id": 3,
+            "title": "Advanced Software Engineering & Architecture 3",
+            "description": "Some text",
+            "backgroundColor": "#9babb2"
+        },
+        {
+            "id": 4,
             "title": "Advanced Software Engineering & Architecture 4",
+            "description": "Some text",
             "backgroundColor": "#3e73b7"
         },
-        "section-5": {
+        {
+            "id": 5,
             "title": "Advanced Software Engineering & Architecture 5",
+            "description": "Some text",
             "backgroundColor": "#f1813b"
         },
-        "section-6": {
+        {
+            "id": 6,
             "title": "Advanced Software Engineering & Architecture 6",
+            "description": "Some text",
             "backgroundColor": "#fabd22"
         }
-    },
+    ]
 }
-/*Section*/
-document.getElementById("section-1").addEventListener("mouseenter", () => changeText(wcisContent.rightCircle["section-1"].title));
-document.getElementById("section-2").addEventListener("mouseenter", () => changeText(wcisContent.rightCircle["section-2"].title));
-document.getElementById("section-3").addEventListener("mouseenter", () => changeText(wcisContent.rightCircle["section-3"].title));
 
-document.getElementById("section-4").addEventListener("mouseenter", () => changeText(wcisContent.leftCircle["section-4"].title));
-document.getElementById("section-5").addEventListener("mouseenter", () => changeText(wcisContent.leftCircle["section-5"].title));
-document.getElementById("section-6").addEventListener("mouseenter", () => changeText(wcisContent.leftCircle["section-6"].title));
+
+/*initializiation sections*/
+let counter = 0.5;
+
+wcisContent.sections.forEach((section) => {
+    const sectionElement = document.getElementById("section-" + section.id);
+    sectionElement.addEventListener("mouseenter", () => changeText(section.title));
+    sectionElement.style.fill = section.backgroundColor;
+    sectionElement.style.opacity = "0";
+    sectionElement.style.animation = "hideshow 1s forwards";
+    sectionElement.style.animationDelay = counter + "s";
+    counter += 0.5;
+})
 
 function changeText(text) {
     document.getElementById("selectedText").innerText = text;
 }
 
-/* opacity */
+/* extra opacity */
 document.getElementsByClassName("gray-rings")[0].style.opacity = "0";
 document.getElementsByClassName("gray-rings")[1].style.opacity = "0";
-document.getElementById("section-1").style.opacity = "0";
-document.getElementById("section-2").style.opacity = "0";
-document.getElementById("section-3").style.opacity = "0";
-document.getElementById("section-4").style.opacity = "0";
-document.getElementById("section-5").style.opacity = "0";
-document.getElementById("section-6").style.opacity = "0";
 document.getElementById("section-center").style.opacity = "0";
 
-/* animation */
-document.getElementById("section-1").style.animation = "hideshow 1s forwards";
-document.getElementById("section-1").style.animationDelay = "0.5s";
-
-document.getElementById("section-2").style.animation = "hideshow 1s forwards";
-document.getElementById("section-2").style.animationDelay = "1s";
-
-document.getElementById("section-3").style.animation = "hideshow 1s forwards";
-document.getElementById("section-3").style.animationDelay = "1.5s";
-
+/* extra animation */
 document.getElementById("section-center").style.animation = "hideshow 1s forwards";
 document.getElementById("section-center").style.animationDelay = "2s";
-
-document.getElementById("section-4").style.animation = "hideshow 1s forwards";
-document.getElementById("section-4").style.animationDelay = "2.5s";
-
-document.getElementById("section-5").style.animation = "hideshow 1s forwards";
-document.getElementById("section-5").style.animationDelay = "3s";
-
-document.getElementById("section-6").style.animation = "hideshow 1s forwards";
-document.getElementById("section-6").style.animationDelay = "3.5s";
-
 document.getElementsByClassName("gray-rings")[0].style.animation = "hideshow_rings 1s forwards";
 document.getElementsByClassName("gray-rings")[0].style.animationDelay = "4s";
-
 document.getElementsByClassName("gray-rings")[1].style.animation = "hideshow_rings 1s forwards";
 document.getElementsByClassName("gray-rings")[1].style.animationDelay = "4s";
 
-/*colors*/
-document.getElementById("section-1").style.fill = wcisContent.rightCircle["section-1"].backgroundColor;
-document.getElementById("section-2").style.fill = wcisContent.rightCircle["section-2"].backgroundColor;
-document.getElementById("section-3").style.fill = wcisContent.rightCircle["section-3"].backgroundColor;
+/*turn 8 - responsive view*/
+window.addEventListener("resize", function () {
+    if (window.screen.width >= 500) {
+        document.getElementById("wcis8").style.transform = "rotate(0deg)";
+        document.getElementById("wcis8").style.margin = "70px";
 
-document.getElementById("section-4").style.fill = wcisContent.leftCircle["section-4"].backgroundColor;
-document.getElementById("section-5").style.fill = wcisContent.leftCircle["section-5"].backgroundColor;
-document.getElementById("section-6").style.fill = wcisContent.leftCircle["section-6"].backgroundColor;
-
-window.addEventListener("resize", function() {
-    if (window.screen.width >= 500 ) {
-        document.getElementById("wcis8").style.transform ="rotate(0deg)";
-        document.getElementById("wcis8").style.margin ="70px";
-
-    }else{
-        document.getElementById("wcis8").style.transform ="rotate(90deg)";
+    } else {
+        document.getElementById("wcis8").style.transform = "rotate(90deg)";
     }
 })
