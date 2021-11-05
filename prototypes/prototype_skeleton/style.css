@@ -1,0 +1,61 @@
+@media ( max-width: 500px ) {
+    .wcis8 {
+        transform: rotate(90deg);
+        margin: 70px;
+    }
+}
+
+@keyframes hideshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#section-1, #section-2, #section-3, #section-4, #section-5, #section-6, #section-7 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+    animation: hideshow 2s;
+}
+
+#background {
+    fill: #cedbef;
+    animation: hideshow 7s;
+}
+
+#section-1 {
+    fill: #49853c;
+}
+
+
+#section-2 {
+    fill: #549bd4;
+}
+
+#section-3 {
+    fill: #9babb2;
+}
+
+#section-4 {
+    fill: #c7d1d4;
+}
+
+#section-5 {
+    fill: #3e73b7;
+}
+
+#section-6 {
+    fill: #f1813b;
+}
+
+#section-7 {
+    fill: #fabd22;
+}
+
+.gray-rings {
+    fill: #231f20;
+    opacity: 0.4;
+}
