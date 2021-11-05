@@ -14,23 +14,26 @@
     }
 }
 
-path[id='section-']{
+@keyframes hideshow_rings {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+path[id='section-'] {
     stroke: #fff;
     stroke-miterlimit: 10;
     stroke-width: 0.25px;
-    animation: hideshow 2s;
 }
 
 #background {
     fill: #cedbef;
-    animation: hideshow 7s;
+    /* animation: hideshow 7s; */
 }
 
 #section-center {
     fill: #c7d1d4;
-}
-
-.gray-rings {
-    fill: #231f20;
-    opacity: 0.4;
 }
