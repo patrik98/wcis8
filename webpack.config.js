@@ -6,6 +6,7 @@ module.exports = {
         index: './src/index.js',
     },
     output: {
+        hashFunction: "xxhash64",
         path: __dirname + '/public',
         filename: 'index.js',
     },
