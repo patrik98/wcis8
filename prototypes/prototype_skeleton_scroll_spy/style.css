@@ -1,0 +1,52 @@
+@keyframes hideshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideshow_rings {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+path[id='section-'] {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 0.25px;
+}
+
+#background {
+    fill: #cedbef;
+    /* animation: hideshow 7s; */
+}
+
+#section-center {
+    fill: #c7d1d4;
+}
+
+#scrollspy-nav {
+    display: none;
+}
+
+#section-header {
+    background: white;
+    position: sticky;
+    top: 0;
+}
+#wcis8 .active {
+    fill: red!important;
+}
+
+.section-offset:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+}
