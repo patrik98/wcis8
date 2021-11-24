@@ -1,0 +1,30 @@
+{
+  "leftTop": {
+    "title": "leftTop",
+    "text": ""
+  },
+  "leftLeft": {
+    "title": "leftLeft",
+    "text": ""
+  },
+  "leftBottom": {
+    "title": "leftBottom",
+    "text": ""
+  },
+  "middle": {
+    "title": "middle",
+    "text": ""
+  },
+  "rightTop": {
+    "title": "rightTop",
+    "text": ""
+  },
+  "rightRight": {
+    "title": "rightRight",
+    "text": ""
+  },
+  "rightBottom": {
+    "title": "rightBottom",
+    "text": ""
+  }
+}

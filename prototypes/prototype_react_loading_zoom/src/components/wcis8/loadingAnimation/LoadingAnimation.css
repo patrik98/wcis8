@@ -1,0 +1,15 @@
+#wcis-loading {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 13%;
+  stroke: #fff;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 8000;
+  animation: animate 12s linear infinite;
+}
+
+@keyframes animate {
+  to {
+      stroke-dashoffset: 0px;
+  }
+}
