@@ -1,3 +1,5 @@
 node_modules
 public
 .idea
+
+!prototypes/prototype_react_loading_zoom/public
