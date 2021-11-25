@@ -30,3 +30,7 @@ path[id='section-'] {
 #section-center {
     fill: #c7d1d4;
 }
+
+.section-title {
+    font-size: small;
+}

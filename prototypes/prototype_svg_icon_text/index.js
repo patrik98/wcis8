@@ -11,36 +11,42 @@ const wcisContent = {
             "title": "Advanced Software Engineering & Architecture 1",
             "description": "Some text",
             "backgroundColor": "#49853c",
+            "fa_icon_unicode": "\u{f101}"
         },
         {
             "id": 2,
             "title": "Advanced Software Engineering & Architecture 2",
             "description": "Some text",
-            "backgroundColor": "#549bd4"
+            "backgroundColor": "#549bd4",
+            "fa_icon_unicode": "\u{f0c2}"
         },
         {
             "id": 3,
             "title": "Advanced Software Engineering & Architecture 3",
             "description": "Some text",
-            "backgroundColor": "#9babb2"
+            "backgroundColor": "#9babb2",
+            "fa_icon_unicode": "\u{f013}"
         },
         {
             "id": 4,
             "title": "Advanced Software Engineering & Architecture 4",
             "description": "Some text",
-            "backgroundColor": "#3e73b7"
+            "backgroundColor": "#3e73b7",
+            "fa_icon_unicode": "\u{f1c0}"
         },
         {
             "id": 5,
             "title": "Advanced Software Engineering & Architecture 5",
             "description": "Some text",
-            "backgroundColor": "#f1813b"
+            "backgroundColor": "#f1813b",
+            "fa_icon_unicode": "\u{f1c9}"
         },
         {
             "id": 6,
             "title": "Advanced Software Engineering & Architecture 6",
             "description": "Some text",
-            "backgroundColor": "#fabd22"
+            "backgroundColor": "#fabd22",
+            "fa_icon_unicode": "\u{f17c}"
         }
     ]
 }
@@ -60,8 +66,7 @@ wcisContent.sections.forEach((section) => {
     // wait for specific section's initial fade in animation to end
     // before displaying 
     sectionElement.addEventListener("animationend", () => {
-        insertTextInSVGSection(sectionElement, "test", true);
-        insertIconInSVGSection(sectionElement, "\f024;");
+        renderTextAndIcon(sectionElement, section.title, section.fa_icon_unicode, false);
     });
 })
 
@@ -93,40 +98,66 @@ window.addEventListener("resize", function () {
     }
 })
 
-function insertTextInSVGSection(element, textContent, debug=false) {
+/**
+ * Rendering of generic text and FontAwesome Icon given the corresponding unicode char
+ * 
+ * @param {HTMLElement} element 
+ * @param {string} textContent 
+ * @param {string} fa_icon_unicode FontAwesome unicode char, see https://fontawesome.com/v4.7/cheatsheet/. You can escape a Unicode code point using the unicode escape sequence "\u{XXXXXX}".
+ * @param {boolean} debug Whether bounding box and center should be displayed
+ * 
+ * @example
+ *      renderTextandIcon(sectionElement, "test", "\u{f101}", false)
+ * 
+ */
+function renderTextAndIcon(element, textContent, fa_icon_unicode, debug=false) {
     if (!element) {
         throw new Error('no element provided.');
     }
 
+    // TODO: bounding box center is not center of wcis 8 section
     const bb = element.getBBox();
     const tf = element.getAttribute("transform");
 
-    // TODO: bounding box center is not center of wcis 8 section
+    const posX = bb.x + bb.width / 2;
+    const posY = bb.y + bb.height / 2;
 
-    const textX = bb.x + bb.width / 2;
-    const textY = bb.y + bb.height / 2;
-
+    // TODO: handle too long titles (https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript)
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    text.textContent = textContent;
-    text.setAttribute("x", textX);
-    text.setAttribute("y", textY);
+    text.setAttribute("x", posX);
+    text.setAttribute("y", posY);
+    text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
     text.setAttribute("text-anchor", "middle");
+    text.classList.add("section-title");
+    text.textContent = textContent;
 
-    // possible cleaner solution for transform: https://stackoverflow.com/questions/10281732/js-svg-getctm-and-setctm
-    text.setAttribute("transform", tf);
+    const wcis8 = document.getElementById("wcis8");
+    wcis8.appendChild(text);
 
-    document.getElementById("wcis8").appendChild(text);
+    if (fa_icon_unicode && fa_icon_unicode !== '') {
+
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        icon.setAttribute("x", posX);
+        icon.setAttribute("y", posY - 15);
+        icon.setAttribute("transform", tf);
+        icon.setAttribute("text-anchor", "middle");
+        icon.setAttribute("font-family", "FontAwesome");
+        icon.textContent = fa_icon_unicode;
+
+        wcis8.appendChild(icon);
+    }
 
     if (debug) {
         console.log(tf);
         console.log(bb);
     
         const center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        center.setAttribute("cx", textX);
-        center.setAttribute("cy", textY);
+        center.setAttribute("cx", posX);
+        center.setAttribute("cy", posY);
+        center.setAttribute("transform", tf);
         center.setAttribute("r", "1");
         center.setAttribute("fill", "red");
-        center.setAttribute("transform", tf);
+
     
         const bbox = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         bbox.setAttribute("x", bb.x);
@@ -138,44 +169,7 @@ function insertTextInSVGSection(element, textContent, debug=false) {
         bbox.setAttribute("stroke-width", "1");
         bbox.setAttribute("fill", "none");
 
-        document.getElementById("wcis8").appendChild(center);
-        document.getElementById("wcis8").appendChild(bbox);
+        wcis8.appendChild(center);
+        wcis8.appendChild(bbox);
     }
-}
-
-function insertIconInSVGSection(element, fa_unicode, debug=false) {
-    // see https://stackoverflow.com/questions/14984007/how-do-i-include-a-font-awesome-icon-in-my-svg
-    // see https://fontawesome.com/v4.7/cheatsheet/
-    if (!element) {
-        throw new Error('no element provided.');
-    }
-
-    if (!fa_unicode) {
-        throw new Error(`no FontAwesome unicode provided.`);
-    }
-
-    const bb = element.getBBox();
-    const tf = element.getAttribute("transform");
-
-    const iconX = bb.x + bb.width / 2;
-    const iconY = bb.y + bb.height / 2;
-
-    // TODO: find way to make FontAwesome icons work within svg
-
-    // const img = document.createElementNS("http://www.w3.org/2000/svg", "image");
-    // img.setAttribute("href", "");
-    // img.setAttribute("x", iconX);
-    // img.setAttribute("y", iconY);
-    // img.setAttribute("transform", tf);
-
-    const foreignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
-    foreignObject.setAttribute("x", iconX);
-    foreignObject.setAttribute("y", iconY);
-    foreignObject.setAttribute("transform", tf);
-
-    const i = document.createElement("i");
-    i.classList.add("fa", "fa-car");
-
-    foreignObject.appendChild(i); 
-    document.getElementById("wcis8").appendChild(foreignObject);
 }
