@@ -11,42 +11,42 @@ const wcisContent = {
             "title": "Advanced Software Engineering & Architecture 1",
             "description": "Some text",
             "backgroundColor": "#49853c",
-            "fa_icon_unicode": "\u{f101}"
+            "icon": "\u{f0e4}"
         },
         {
             "id": 2,
             "title": "Advanced Software Engineering & Architecture 2",
             "description": "Some text",
             "backgroundColor": "#549bd4",
-            "fa_icon_unicode": "\u{f0c2}"
+            "icon": "\u{f0c2}"
         },
         {
             "id": 3,
             "title": "Advanced Software Engineering & Architecture 3",
             "description": "Some text",
             "backgroundColor": "#9babb2",
-            "fa_icon_unicode": "\u{f013}"
+            "icon": "\u{f013}"
         },
         {
             "id": 4,
             "title": "Advanced Software Engineering & Architecture 4",
             "description": "Some text",
             "backgroundColor": "#3e73b7",
-            "fa_icon_unicode": "\u{f1c0}"
+            "icon": "https://cdn-icons-png.flaticon.com/512/1377/1377790.png"
         },
         {
             "id": 5,
             "title": "Advanced Software Engineering & Architecture 5",
             "description": "Some text",
             "backgroundColor": "#f1813b",
-            "fa_icon_unicode": "\u{f1c9}"
+            "icon": "\u{f1c9}"
         },
         {
             "id": 6,
             "title": "Advanced Software Engineering & Architecture 6",
             "description": "Some text",
             "backgroundColor": "#fabd22",
-            "fa_icon_unicode": "\u{f17c}"
+            "icon": "./cloud-service.png"
         }
     ]
 }
@@ -66,7 +66,7 @@ wcisContent.sections.forEach((section) => {
     // wait for specific section's initial fade in animation to end
     // before displaying 
     sectionElement.addEventListener("animationend", () => {
-        renderTextAndIcon(sectionElement, section.title, section.fa_icon_unicode, false);
+        renderTextAndIcon(sectionElement, section, false);
     });
 })
 
@@ -101,53 +101,81 @@ window.addEventListener("resize", function () {
 /**
  * Rendering of generic text and FontAwesome Icon given the corresponding unicode char
  * 
- * @param {HTMLElement} element 
- * @param {string} textContent 
- * @param {string} fa_icon_unicode FontAwesome unicode char, see https://fontawesome.com/v4.7/cheatsheet/. You can escape a Unicode code point using the unicode escape sequence "\u{XXXXXX}".
- * @param {boolean} debug Whether bounding box and center should be displayed
+ * @param {HTMLElement} element html element
+ * @param {Object} section section json content
+ * @param {boolean} debug whether bounding box and center should be displayed for debugging
  * 
  * @example
- *      renderTextandIcon(sectionElement, "test", "\u{f101}", false)
+ *       const section = {
+            "id": 1,
+            "title": "Some title",
+            "description": "Some text",
+            "backgroundColor": "#49853c",
+            "icon": "\u{f0e4}" or "icon": "../icon.png" // can be FontAwesome unicode char or link
+        };
+
+ *      renderTextandIcon(sectionElement, section, false)
  * 
  */
-function renderTextAndIcon(element, textContent, fa_icon_unicode, debug=false) {
+function renderTextAndIcon(element, section, debug=true) {
     if (!element) {
-        throw new Error('no element provided.');
+        throw new Error("no element provided.");
     }
 
-    // TODO: bounding box center is not center of wcis 8 section
+    if (!section) {
+        throw new Error("no section provided.");
+    }
+
+    // TODO: bounding box center is not center of actual wcis 8 section
     const bb = element.getBBox();
     const tf = element.getAttribute("transform");
 
     const posX = bb.x + bb.width / 2;
     const posY = bb.y + bb.height / 2;
 
-    // TODO: handle too long titles (https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript)
-    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    text.setAttribute("x", posX);
-    text.setAttribute("y", posY);
-    text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
-    text.setAttribute("text-anchor", "middle");
-    text.classList.add("section-title");
-    text.textContent = textContent;
-
     const wcis8 = document.getElementById("wcis8");
-    wcis8.appendChild(text);
 
-    if (fa_icon_unicode && fa_icon_unicode !== '') {
+    if (section.title) {
+        // TODO: handle too long titles (https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript)
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", posX);
+        text.setAttribute("y", posY);
+        text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
+        text.setAttribute("text-anchor", "middle");
+        text.classList.add("section-title");
+        text.textContent = section.title;
 
-        const icon = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        icon.setAttribute("x", posX);
-        icon.setAttribute("y", posY - 15);
+        wcis8.appendChild(text);
+    }
+
+    if (section.icon) {
+        let icon;
+
+        if (/[^\u0000-\u00ff]/.test(section.icon)) { // check whether section.icon contains unicode, is FontAwesome unicode char
+            icon = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            icon.setAttribute("x", posX);
+            icon.setAttribute("y", posY - 15);
+            icon.setAttribute("transform", tf);
+            icon.setAttribute("text-anchor", "middle");
+            icon.setAttribute("font-family", "FontAwesome");
+            icon.classList.add("fa", "fa-2x")
+            icon.textContent = section.icon;
+        }
+        else { // assume section.icon is link
+            const dim = 32;
+            icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
+            icon.setAttribute("x", posX - dim / 2);
+            icon.setAttribute("y", posY - dim - 15);
+            icon.setAttribute("width", dim);
+            icon.setAttribute("height", dim);
+            icon.setAttribute("href", section.icon);
+        }
+
         icon.setAttribute("transform", tf);
-        icon.setAttribute("text-anchor", "middle");
-        icon.setAttribute("font-family", "FontAwesome");
-        icon.textContent = fa_icon_unicode;
-
         wcis8.appendChild(icon);
     }
 
-    if (debug) {
+    if (debug) { // bounding box rectangle and center dot for debugging
         console.log(tf);
         console.log(bb);
     
@@ -172,4 +200,8 @@ function renderTextAndIcon(element, textContent, fa_icon_unicode, debug=false) {
         wcis8.appendChild(center);
         wcis8.appendChild(bbox);
     }
+}
+
+function containsNonLatinCodepoints(s) {
+    return /[^\u0000-\u00ff]/.test(s);
 }
