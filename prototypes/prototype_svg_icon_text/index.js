@@ -11,21 +11,21 @@ const wcisContent = {
             "title": "Advanced Software Engineering & Architecture 1",
             "description": "Some text",
             "backgroundColor": "#49853c",
-            "icon": "\u{f0e4}"
+            "icon": "./cloud-service.png"
         },
         {
             "id": 2,
             "title": "Advanced Software Engineering & Architecture 2",
             "description": "Some text",
             "backgroundColor": "#549bd4",
-            "icon": "\u{f0c2}"
+            "icon": "./cloud-service.png"
         },
         {
             "id": 3,
             "title": "Advanced Software Engineering & Architecture 3",
             "description": "Some text",
             "backgroundColor": "#9babb2",
-            "icon": "\u{f013}"
+            "icon": "./cloud-service.png"
         },
         {
             "id": 4,
@@ -39,7 +39,7 @@ const wcisContent = {
             "title": "Advanced Software Engineering & Architecture 5",
             "description": "Some text",
             "backgroundColor": "#f1813b",
-            "icon": "\u{f1c9}"
+            "icon": "./cloud-service.png"
         },
         {
             "id": 6,
@@ -68,7 +68,7 @@ wcisContent.sections.forEach((section) => {
     sectionElement.addEventListener("animationend", () => {
         renderTextAndIcon(sectionElement, section, false);
     });
-})
+});
 
 function changeText(text) {
     document.getElementById("selectedText").innerText = text;
@@ -96,10 +96,10 @@ window.addEventListener("resize", function () {
     } else {
         document.getElementById("wcis8").style.transform = "rotate(90deg)";
     }
-})
+});
 
 /**
- * Rendering of generic text and FontAwesome Icon given the corresponding unicode char
+ * Rendering of generic text and icon given the section object
  * 
  * @param {HTMLElement} element html element
  * @param {Object} section section json content
@@ -111,13 +111,13 @@ window.addEventListener("resize", function () {
             "title": "Some title",
             "description": "Some text",
             "backgroundColor": "#49853c",
-            "icon": "\u{f0e4}" or "icon": "../icon.png" // can be FontAwesome unicode char or link
+            "icon": "../icon.png" // link
         };
 
  *      renderTextandIcon(sectionElement, section, false)
  * 
  */
-function renderTextAndIcon(element, section, debug=true) {
+function renderTextAndIcon(element, section, debug=false) {
     if (!element) {
         throw new Error("no element provided.");
     }
@@ -127,6 +127,7 @@ function renderTextAndIcon(element, section, debug=true) {
     }
 
     // TODO: bounding box center is not center of actual wcis 8 section
+    //       find fitting center coords per section
     const bb = element.getBBox();
     const tf = element.getAttribute("transform");
 
@@ -149,29 +150,15 @@ function renderTextAndIcon(element, section, debug=true) {
     }
 
     if (section.icon) {
-        let icon;
-
-        if (/[^\u0000-\u00ff]/.test(section.icon)) { // check whether section.icon contains unicode, is FontAwesome unicode char
-            icon = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            icon.setAttribute("x", posX);
-            icon.setAttribute("y", posY - 15);
-            icon.setAttribute("transform", tf);
-            icon.setAttribute("text-anchor", "middle");
-            icon.setAttribute("font-family", "FontAwesome");
-            icon.classList.add("fa", "fa-2x")
-            icon.textContent = section.icon;
-        }
-        else { // assume section.icon is link
-            const dim = 32;
-            icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
-            icon.setAttribute("x", posX - dim / 2);
-            icon.setAttribute("y", posY - dim - 15);
-            icon.setAttribute("width", dim);
-            icon.setAttribute("height", dim);
-            icon.setAttribute("href", section.icon);
-        }
-
+        const dim = 32;
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        icon.setAttribute("x", posX - dim / 2);
+        icon.setAttribute("y", posY - dim - 15);
+        icon.setAttribute("width", dim);
+        icon.setAttribute("height", dim);
         icon.setAttribute("transform", tf);
+        icon.setAttribute("href", section.icon);
+
         wcis8.appendChild(icon);
     }
 
@@ -200,8 +187,4 @@ function renderTextAndIcon(element, section, debug=true) {
         wcis8.appendChild(center);
         wcis8.appendChild(bbox);
     }
-}
-
-function containsNonLatinCodepoints(s) {
-    return /[^\u0000-\u00ff]/.test(s);
 }
