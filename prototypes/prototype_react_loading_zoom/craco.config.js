@@ -7,4 +7,5 @@ module.exports = {
             ],
         },
     },
+    throwIfNamespace: false
 }

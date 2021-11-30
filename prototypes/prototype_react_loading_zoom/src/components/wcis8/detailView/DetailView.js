@@ -4,7 +4,8 @@ import './DetailView.scss';
 function DetailView({detailViewKey, onResetZoom, content}) {
     const [contentObject, setContentObject] = useState({
         title: '',
-        text: ''
+        text: '',
+        type: ''
     })
 
     useEffect(() => {
@@ -28,11 +29,17 @@ function DetailView({detailViewKey, onResetZoom, content}) {
         <Fragment>
             <div className={'detail-container'}>
                 <div className={'detail-text'}>
-                    <h2>{contentObject.title}</h2>
-                    <p>
+                    <h2 className={'text-5xl mb-4'}>{contentObject.title}</h2>
+                    {contentObject.type === 'text' && <p>
                         {contentObject.text}
-                    </p>
-                    <a onClick={onBackButtonClick} type={'button'}>
+                    </p>}
+                    {contentObject.type === 'video' && <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GXjyX-El1mU"
+                                title="YouTube video player" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+                    </div>}
+                    <a onClick={onBackButtonClick} type={'button'} className={'mt-4'}>
                         Zurück
                     </a>
                 </div>

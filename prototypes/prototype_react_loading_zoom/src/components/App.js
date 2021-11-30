@@ -17,7 +17,7 @@ function App() {
 
     setTimeout(() => {
         setIsLoading(false)
-    }, 2000);
+    }, 5000);
 
     useEffect(() => {
         const viewBox = document.querySelector('#view-box');

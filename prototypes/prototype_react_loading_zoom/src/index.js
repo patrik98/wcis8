@@ -6,9 +6,9 @@ import FHPage from "./components/fh-kufstein/FHPage";
 
 ReactDOM.render(
   <React.StrictMode>
-      <FHPage>
+      {/*<FHPage>*/}
           <App></App>
-      </FHPage>
+      {/*</FHPage>*/}
   </React.StrictMode>,
   document.getElementById('root')
 );
