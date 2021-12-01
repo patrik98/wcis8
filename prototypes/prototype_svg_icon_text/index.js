@@ -8,45 +8,71 @@ const wcisContent = {
     "sections": [
         {
             "id": 1,
-            "title": "Advanced Software Engineering & Architecture 1",
+            "lines": [
+                "Mixed Reality,",
+                "Intelligent & Adaptive Systems"
+            ],
             "description": "Some text",
             "backgroundColor": "#49853c",
-            "icon": "./cloud-service.png"
+            "icon": "./vr-glasses.png",
+            "pos": [446.5, 78]
         },
         {
             "id": 2,
-            "title": "Advanced Software Engineering & Architecture 2",
+            "lines": [
+                "E-Business,",
+                "Content &",
+                "Collaboration"
+            ],
             "description": "Some text",
             "backgroundColor": "#549bd4",
-            "icon": "./cloud-service.png"
+            "icon": "./macbook-money.png",
+            "pos": [565, 185]
         },
         {
             "id": 3,
-            "title": "Advanced Software Engineering & Architecture 3",
+            "lines": [
+                "Cloud Foundation &",
+                "Technologies"
+            ],
             "description": "Some text",
             "backgroundColor": "#9babb2",
-            "icon": "./cloud-service.png"
+            "icon": "./cloud-solid.svg",
+            "pos": [446.5, 320]
         },
         {
             "id": 4,
-            "title": "Advanced Software Engineering & Architecture 4",
+            "lines": [
+                "Software Development",
+                "Web/Mobile/Embedded"
+            ],
             "description": "Some text",
             "backgroundColor": "#3e73b7",
-            "icon": "https://cdn-icons-png.flaticon.com/512/1377/1377790.png"
+            "icon": "./terminal-solid.svg",
+            "pos": [203.5, 78]
         },
         {
             "id": 5,
-            "title": "Advanced Software Engineering & Architecture 5",
+            "lines": [
+                "Development",
+                "Processes &",
+                "Operation Support"
+            ],
             "description": "Some text",
             "backgroundColor": "#f1813b",
-            "icon": "./cloud-service.png"
+            "icon": "./cogs-solid.svg",
+            "pos": [81, 185]
         },
         {
             "id": 6,
-            "title": "Advanced Software Engineering & Architecture 6",
+            "lines": [
+                "Advanced Software Engineering &",
+                "Architecture"
+            ],
             "description": "Some text",
             "backgroundColor": "#fabd22",
-            "icon": "./cloud-service.png"
+            "icon": "./sweg.png",
+            "pos": [203.5, 320]
         }
     ]
 }
@@ -63,9 +89,10 @@ wcisContent.sections.forEach((section) => {
     sectionElement.style.animationDelay = counter + "s";
     counter += 0.5;
 
-    // wait for specific section's initial fade in animation to end
+    // wait for specific section"s initial fade in animation to end
     // before displaying 
     sectionElement.addEventListener("animationend", () => {
+        // hardcoded positions for now
         renderTextAndIcon(sectionElement, section, false);
     });
 });
@@ -107,12 +134,17 @@ window.addEventListener("resize", function () {
  * 
  * @example
  *       const section = {
-            "id": 1,
-            "title": "Some title",
+            "id": 5,
+            "lines": [
+                "Development",
+                "Processes &",
+                "Operation Support"
+            ],
             "description": "Some text",
-            "backgroundColor": "#49853c",
-            "icon": "../icon.png" // link
-        };
+            "backgroundColor": "#f1813b",
+            "icon": "./cogs-solid.svg",
+            "pos": [81, 185]
+        }
 
  *      renderTextandIcon(sectionElement, section, false)
  * 
@@ -128,35 +160,46 @@ function renderTextAndIcon(element, section, debug=false) {
 
     // TODO: bounding box center is not center of actual wcis 8 section
     //       find fitting center coords per section
-    const bb = element.getBBox();
+    let posX = section.pos[0];
+    let posY = section.pos[1];
     const tf = element.getAttribute("transform");
+    const bb = element.getBBox();
 
-    const posX = bb.x + bb.width / 2;
-    const posY = bb.y + bb.height / 2;
+    if (!posX && !posY) {
+        posX = bb.x + bb.width / 2;
+        posY = bb.y + bb.height / 2;
+    }
 
     const wcis8 = document.getElementById("wcis8");
 
-    if (section.title) {
+    if (section.lines && section.lines.length > 0) {
         // TODO: handle too long titles (https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript)
         const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text.setAttribute("x", posX);
         text.setAttribute("y", posY);
-        text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
+        // text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
         text.setAttribute("text-anchor", "middle");
         text.classList.add("section-title");
-        text.textContent = section.title;
+
+        section.lines.map((line, index) => {
+            const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+            tspan.setAttribute("x", posX);
+            tspan.setAttribute("dy", 15)
+            tspan.textContent = line;
+            text.appendChild(tspan);
+        });
 
         wcis8.appendChild(text);
     }
 
     if (section.icon) {
-        const dim = 32;
+        const dim = 28;
         const icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
         icon.setAttribute("x", posX - dim / 2);
-        icon.setAttribute("y", posY - dim - 15);
+        icon.setAttribute("y", posY - dim);
         icon.setAttribute("width", dim);
         icon.setAttribute("height", dim);
-        icon.setAttribute("transform", tf);
+        // icon.setAttribute("transform", tf);
         icon.setAttribute("href", section.icon);
 
         wcis8.appendChild(icon);
@@ -169,7 +212,7 @@ function renderTextAndIcon(element, section, debug=false) {
         const center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         center.setAttribute("cx", posX);
         center.setAttribute("cy", posY);
-        center.setAttribute("transform", tf);
+        // center.setAttribute("transform", tf);
         center.setAttribute("r", "1");
         center.setAttribute("fill", "red");
 
@@ -186,5 +229,22 @@ function renderTextAndIcon(element, section, debug=false) {
 
         wcis8.appendChild(center);
         wcis8.appendChild(bbox);
+
+        element.addEventListener("click", e => {
+            const pt = wcis8.createSVGPoint();
+            pt.x = e.clientX;
+            pt.y = e.clientY;
+        
+            const svgP = pt.matrixTransform(wcis8.getScreenCTM().inverse());
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", svgP.x);
+            circle.setAttribute("cy", svgP.y);
+            circle.setAttribute("r", 2);
+            circle.setAttribute("fill", "white");
+        
+            console.log([svgP.x, svgP.y]);
+          
+            wcis8.appendChild(circle);
+        });
     }
 }
