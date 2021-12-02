@@ -1,9 +1,17 @@
 const wcisContent = {
     "rightCircle": {
-        "title": "Development & Engineering",
+        "lines": [
+            "Web-based",
+            "Systems"
+        ],
+        "pos": [446.5, 185]
     },
     "leftCircle": {
-        "title": "Development & Engineering",
+        "lines": [
+            "Development &",
+            "Engineering"
+        ],
+        "pos": [203.5, 185]
     },
     "sections": [
         {
@@ -82,7 +90,7 @@ let counter = 0.5;
 
 wcisContent.sections.forEach((section) => {
     const sectionElement = document.getElementById("section-" + section.id);
-    sectionElement.addEventListener("mouseenter", () => changeText(section.title));
+    sectionElement.addEventListener("mouseenter", () => changeText(section.lines));
     sectionElement.style.fill = section.backgroundColor;
     sectionElement.style.opacity = "0";
     sectionElement.style.animation = "hideshow 1s forwards";
@@ -95,6 +103,14 @@ wcisContent.sections.forEach((section) => {
         // hardcoded positions for now
         renderTextAndIcon(sectionElement, section, false);
     });
+});
+
+const rings = document.getElementsByClassName("gray-rings");
+rings[0].addEventListener("animationend", () => {
+    renderTextAndIcon(rings[0], wcisContent.leftCircle, false);
+});
+rings[0].addEventListener("animationend", () => {
+    renderTextAndIcon(rings[1], wcisContent.rightCircle, false);
 });
 
 function changeText(text) {
@@ -129,7 +145,7 @@ window.addEventListener("resize", function () {
  * Rendering of generic text and icon given the section object
  * 
  * @param {HTMLElement} element html element
- * @param {Object} section section json content
+ * @param {Object} wcis8_object wcis8 content object such as leftCircle, rightCircle or section
  * @param {boolean} debug whether bounding box and center should be displayed for debugging
  * 
  * @example
@@ -146,22 +162,20 @@ window.addEventListener("resize", function () {
             "pos": [81, 185]
         }
 
- *      renderTextandIcon(sectionElement, section, false)
+ *      renderTextandIcon(element, wcis8_object, false)
  * 
  */
-function renderTextAndIcon(element, section, debug=false) {
+function renderTextAndIcon(element, wcis8_object, debug=false) {
     if (!element) {
         throw new Error("no element provided.");
     }
 
-    if (!section) {
+    if (!wcis8_object) {
         throw new Error("no section provided.");
     }
 
-    // TODO: bounding box center is not center of actual wcis 8 section
-    //       find fitting center coords per section
-    let posX = section.pos[0];
-    let posY = section.pos[1];
+    let posX = wcis8_object.pos[0];
+    let posY = wcis8_object.pos[1];
     const tf = element.getAttribute("transform");
     const bb = element.getBBox();
 
@@ -172,16 +186,15 @@ function renderTextAndIcon(element, section, debug=false) {
 
     const wcis8 = document.getElementById("wcis8");
 
-    if (section.lines && section.lines.length > 0) {
-        // TODO: handle too long titles (https://stackoverflow.com/questions/16701522/how-to-linebreak-an-svg-text-within-javascript)
+    if (wcis8_object.lines && wcis8_object.lines.length > 0) {
         const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text.setAttribute("x", posX);
         text.setAttribute("y", posY);
-        // text.setAttribute("transform", tf); // possible cleaner solution for transform: https://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
+        // text.setAttribute("transform", tf);
         text.setAttribute("text-anchor", "middle");
         text.classList.add("section-title");
 
-        section.lines.map((line, index) => {
+        wcis8_object.lines.map((line, index) => {
             const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
             tspan.setAttribute("x", posX);
             tspan.setAttribute("dy", 15)
@@ -192,7 +205,7 @@ function renderTextAndIcon(element, section, debug=false) {
         wcis8.appendChild(text);
     }
 
-    if (section.icon) {
+    if (wcis8_object.icon) {
         const dim = 28;
         const icon = document.createElementNS("http://www.w3.org/2000/svg", "image");
         icon.setAttribute("x", posX - dim / 2);
@@ -200,7 +213,7 @@ function renderTextAndIcon(element, section, debug=false) {
         icon.setAttribute("width", dim);
         icon.setAttribute("height", dim);
         // icon.setAttribute("transform", tf);
-        icon.setAttribute("href", section.icon);
+        icon.setAttribute("href", wcis8_object.icon);
 
         wcis8.appendChild(icon);
     }
