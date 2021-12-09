@@ -13,10 +13,15 @@ function WCIS8({viewBox, onResetZoom}) {
                       d="M655.89,182.54l-60.7,60.7a76.93,76.93,0,0,1,0,108.79l60.7,60.7A162.78,162.78,0,0,0,655.89,182.54Z"
                       transform="translate(-98.03 -94.57)"/>
             </InteractivePath>
-                <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightBottom'}>
+            <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightBottom'}>
+                <linearGradient id="gradientRightBottom">
+                  <stop offset="0" stopColor="#48BED8"/>
+                  <stop offset="1" stopColor="#0462A7"/>
+                </linearGradient>
                 <path className="cls-3"
                       d="M655.89,412.73,595.19,352a76.93,76.93,0,0,1-108.79,0l-60.7,60.7A162.76,162.76,0,0,0,655.89,412.73Z"
-                      transform="translate(-98.03 -94.57)"/>
+                      transform="translate(-98.03 -94.57)"
+                      fill="url(#gradientRightBottom)"/>
             </InteractivePath>
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'leftLeft'}>
                 <path className="cls-4"
@@ -24,19 +29,34 @@ function WCIS8({viewBox, onResetZoom}) {
                       transform="translate(-98.03 -94.57)"/>
             </InteractivePath>
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'leftTop'}>
+                <linearGradient id="gradientLeftTop">
+                  <stop  offset="0" stopColor="#93C02F"/>
+                  <stop  offset="1" stopColor="#48BED8"/>
+                </linearGradient>
                 <path class="cls-5"
                       d="M186,182.54l60.7,60.7a76.93,76.93,0,0,1,108.79,0l60.7-60.7A162.78,162.78,0,0,0,186,182.54Z"
-                      transform="translate(-98.03 -94.57)"/>
+                      transform="translate(-98.03 -94.57)"
+                      fill="url(#gradientLeftTop)"/>
             </InteractivePath>
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'leftBottom'}>
+              <linearGradient id="gradientLeftBottom">
+                <stop  offset="0" stopColor="#93C02F"/>
+                <stop  offset="1" stopColor="#48BED8"/>
+              </linearGradient>
                 <path class="cls-6"
                       d="M371.24,329.24A77,77,0,0,1,246.7,352L186,412.73a162.74,162.74,0,0,0,228.13,2A172,172,0,0,1,371.24,329.24Z"
-                      transform="translate(-98.03 -94.57)"/>
+                      transform="translate(-98.03 -94.57)"
+                      fill="url(#gradientLeftBottom)"/>
             </InteractivePath>
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightTop'}>
+              <linearGradient id="gradientRightTop">
+                <stop  offset="0" stopColor="#48BED8"/>
+                <stop  offset="1" stopColor="#0462A7"/>
+              </linearGradient>
                 <path class="cls-7"
                       d="M427.76,180.59A171.92,171.92,0,0,1,470.65,266a76.94,76.94,0,0,1,124.54-22.8l60.7-60.7A162.74,162.74,0,0,0,427.76,180.59Z"
-                      transform="translate(-98.03 -94.57)"/>
+                      transform="translate(-98.03 -94.57)"
+                      fill="url(#gradientRightTop)"/>
             </InteractivePath>
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'middle'}>
                 <path class="cls-8"
