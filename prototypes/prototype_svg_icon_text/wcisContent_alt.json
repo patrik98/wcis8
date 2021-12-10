@@ -1,0 +1,86 @@
+{
+    "rightCircle": {
+        "lines": [
+            "Web-based",
+            "Systems"
+        ],
+        "pos": [446.5, 185]
+    },
+    "leftCircle": {
+        "lines": [
+            "Development &",
+            "Engineering"
+        ],
+        "pos": [203.5, 185]
+    },
+    "sections": [
+        {
+            "id": 1,
+            "lines": [
+                "Mixed Reality,",
+                "Intelligent & Adaptive Systems"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#49853c",
+            "icon": "./icons/VRAR.svg",
+            "pos": [446.5, 78]
+        },
+        {
+            "id": 2,
+            "lines": [
+                "E-Business,",
+                "Content &",
+                "Collaboration"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#549bd4",
+            "icon": "./icons/E-Biz.svg",
+            "pos": [565, 185]
+        },
+        {
+            "id": 3,
+            "lines": [
+                "Cloud Foundation &",
+                "Technologies"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#9babb2",
+            "icon": "./icons/Cloud.svg",
+            "pos": [446.5, 320]
+        },
+        {
+            "id": 4,
+            "lines": [
+                "Software Development",
+                "Web/Mobile/Embedded"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#3e73b7",
+            "icon": "./icons/Coding.svg",
+            "pos": [203.5, 78]
+        },
+        {
+            "id": 5,
+            "lines": [
+                "Development",
+                "Processes &",
+                "Operation Support"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#f1813b",
+            "icon": "./icons/DevOps.svg",
+            "pos": [81, 185]
+        },
+        {
+            "id": 6,
+            "lines": [
+                "Advanced Software Engineering &",
+                "Architecture"
+            ],
+            "description": "Some text",
+            "backgroundColor": "#fabd22",
+            "icon": "./icons/sweg.png",
+            "pos": [203.5, 320]
+        }
+    ]
+}

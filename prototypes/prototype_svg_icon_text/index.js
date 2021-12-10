@@ -17,73 +17,65 @@ const wcisContent = {
         {
             "id": 1,
             "lines": [
-                "Mixed Reality,",
-                "Intelligent & Adaptive Systems"
+                "VR & AR"
             ],
             "description": "Some text",
             "backgroundColor": "#49853c",
-            "icon": "./vr-glasses.png",
-            "pos": [446.5, 78]
+            "icon": "./icons/VRAR.svg",
+            "pos": [446.5, 90]
         },
         {
             "id": 2,
             "lines": [
-                "E-Business,",
-                "Content &",
-                "Collaboration"
+                "E-Biz"
             ],
             "description": "Some text",
             "backgroundColor": "#549bd4",
-            "icon": "./macbook-money.png",
-            "pos": [565, 185]
+            "icon": "./icons/E-Biz.svg",
+            "pos": [565, 200]
         },
         {
             "id": 3,
             "lines": [
-                "Cloud Foundation &",
-                "Technologies"
+                "Cloud"
             ],
             "description": "Some text",
             "backgroundColor": "#9babb2",
-            "icon": "./cloud-solid.svg",
-            "pos": [446.5, 320]
+            "icon": "./icons/Cloud.svg",
+            "pos": [446.5, 325]
         },
         {
             "id": 4,
             "lines": [
-                "Software Development",
-                "Web/Mobile/Embedded"
+                "Coding"
             ],
             "description": "Some text",
             "backgroundColor": "#3e73b7",
-            "icon": "./terminal-solid.svg",
-            "pos": [203.5, 78]
+            "icon": "./icons/Coding.svg",
+            "pos": [203.5, 90]
         },
         {
             "id": 5,
             "lines": [
-                "Development",
-                "Processes &",
-                "Operation Support"
+                "DevOps"
             ],
             "description": "Some text",
             "backgroundColor": "#f1813b",
-            "icon": "./cogs-solid.svg",
-            "pos": [81, 185]
+            "icon": "./icons/DevOps.svg",
+            "pos": [81, 200]
         },
         {
             "id": 6,
             "lines": [
-                "Advanced Software Engineering &",
-                "Architecture"
+                "SWEG"
             ],
             "description": "Some text",
             "backgroundColor": "#fabd22",
-            "icon": "./sweg.png",
-            "pos": [203.5, 320]
+            "icon": "./icons/AdvancedSE.svg",
+            "pos": [203.5, 325]
         }
     ]
-}
+};
 
 /*initializiation sections*/
 let counter = 0.5;
