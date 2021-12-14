@@ -1,5 +1,6 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import './DetailView.scss';
+import Cloud from "./Cloud";
 
 function DetailView({detailViewKey, onResetZoom, content}) {
     const [contentObject, setContentObject] = useState({
@@ -39,6 +40,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen></iframe>
                     </div>}
+                    <Cloud contentArray={["topic1", "topic2","topic3", "topic4","topic5", "topic6","topic7", "topic8"]}/>
                     <a onClick={onBackButtonClick} type={'button'} className={'mt-4'}>
                         Zurück
                     </a>
