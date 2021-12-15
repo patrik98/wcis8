@@ -33,6 +33,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                     <h2 className={'text-5xl mb-4'}>{contentObject.title}</h2>
                     {contentObject.type === 'text' && <p>
                         {contentObject.text}
+                        Key: {detailViewKey}
                     </p>}
                     {contentObject.type === 'video' && <div>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/GXjyX-El1mU"

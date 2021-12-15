@@ -5,7 +5,7 @@ import {TagCloud} from 'react-tagcloud'
 
 function Cloud({contentArray}) {
 
-    const colors = ["#FFFFFF"]
+    const colors = ["#FFFFFF"] //array containing different colors for words in cloud
 
     function createData(minSize, maxSize) {
         let data = [];
@@ -15,7 +15,6 @@ function Cloud({contentArray}) {
                 count: Math.floor(Math.random() * (maxSize - minSize + 1) + minSize),
                 color: colors[Math.floor(Math.random() * colors.length)]
             })
-            console.log(Math.round(Math.random() * (maxSize - minSize + 1) + minSize));
         })
         return data;
     }
