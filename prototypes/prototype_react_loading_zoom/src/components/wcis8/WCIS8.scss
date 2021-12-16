@@ -45,3 +45,24 @@
 .cls-8 {
     fill: #4ABFD8
 }
+
+
+/*
+x-offset: -90
+y-offset: 95
+
+ */
+
+@keyframes shake {
+    0% { transform: translate(-90px, -95px) rotate(0deg); }
+    10% { transform: translate(-91px, -93px) rotate(-1deg); }
+    20% { transform: translate(-93px, -95px) rotate(1deg); }
+    30% { transform: translate(-87px, -97px) rotate(0deg); }
+    40% { transform: translate(-89px, -94px) rotate(1deg); }
+    50% { transform: translate(-91px, -97px) rotate(-1deg); }
+    60% { transform: translate(-93px, -96px) rotate(0deg); }
+    70% { transform: translate(-93px, -96px) rotate(-1deg); }
+    80% { transform: translate(-91px, -94px) rotate(1deg); }
+    90% { transform: translate(-91px, -97px) rotate(0deg); }
+    100% { transform: translate(-91px, -93px) rotate(-1deg); }
+}

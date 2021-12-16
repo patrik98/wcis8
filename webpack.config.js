@@ -5,6 +5,22 @@ module.exports = {
     entry: {
         index: './src/index.js',
     },
+    module: {
+        rules: [
+            //...
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[hash]-[name].[ext]',
+                        },
+                    },
+                ],
+            },
+        ],
+    },
     output: {
         hashFunction: "xxhash64",
         path: __dirname + '/public',
@@ -13,8 +29,8 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: './*.html', to: './'},
-                { from: 'assets', to: 'assets' },
+                {from: './*.html', to: './'},
+                {from: 'assets', to: 'assets'},
             ],
         }),
     ],

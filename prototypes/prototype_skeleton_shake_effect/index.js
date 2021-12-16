@@ -94,12 +94,12 @@ function randomInteger(min, max) {
 
 setTimeout(() => {
     setInterval(function () {
-        let sectionName = "section-" + randomInteger(1, 6);
+        let sectionName = "section-" + randomInteger(1, 7);
         const section = document.getElementById(sectionName);
         section.style.animation = "shake";
         section.style.animationDuration = "0.5s";
         section.style.opacity = "100%";
-        section.style.animationIterationCount = "infinite";
+       // section.style.animationIterationCount = "infinite";
         setTimeout(() => {
             section.style.animation = "none";
         }, 1000)
