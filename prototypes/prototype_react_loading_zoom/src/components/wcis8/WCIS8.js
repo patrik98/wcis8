@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import './WCIS8.scss';
 import InteractivePath from "./interactivePath/InteractivePath";
 
@@ -9,17 +9,18 @@ function WCIS8({viewBox, onResetZoom}) {
     }
 
 
-    setInterval(function () {
-        const sectionName = "section-" + randomInteger(1, 5);
-        const section = document.getElementById(sectionName);
-        section.style.animation = "shake";
-        section.style.animationDuration = "1s";
-        section.style.opacity = "100%";
-        section.style.animationIterationCount = "infinite";
-        setTimeout(() => {
-            section.style.animation = "none";
-        }, 1000)
-    }, 10000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const sectionName = "section-" + randomInteger(1, 5);
+            const section = document.getElementById(sectionName);
+            section.style.animation = "shake";
+            section.style.animationDuration = "1.3s";
+            setTimeout(() => {
+                section.style.animation = "none";
+            }, 1000)
+        },  randomInteger(4000, 6000));
+        return () => clearInterval(interval);
+    }, []);
 
 
     return (
@@ -27,7 +28,7 @@ function WCIS8({viewBox, onResetZoom}) {
             <path id="Background" className="cls-1"
                   d="M540.79,94.57a202.12,202.12,0,0,0-119.85,39.17A202.07,202.07,0,0,0,301.1,94.57C189,94.57,98,185.49,98,297.64S189,500.71,301.1,500.71a202.07,202.07,0,0,0,119.84-39.17,202.12,202.12,0,0,0,119.85,39.17c112.15,0,203.07-90.92,203.07-203.07S652.94,94.57,540.79,94.57Z"
                   transform="translate(-98.03 -94.57)"/>
-            <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightRight'} >
+            <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightRight'}>
                 <path className="cls-2" id="section-1"
                       d="M655.89,182.54l-60.7,60.7a76.93,76.93,0,0,1,0,108.79l60.7,60.7A162.78,162.78,0,0,0,655.89,182.54Z"
                       transform="translate(-98.03 -94.57)"/>
