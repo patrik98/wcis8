@@ -36,7 +36,7 @@ function App() {
                 <div className={'wcis8-container'}>
                     <div className={'view-container'}>
                         <svg id="view-box" viewBox="-100 -100 800 600">
-                            <WCIS8 viewBox={viewBox} onResetZoom={setDefaultView}/>
+                            <WCIS8 content={content} viewBox={viewBox} onResetZoom={setDefaultView}/>
                             {isLoading && <LoadingAnimation />}
                         </svg>
                     </div>
