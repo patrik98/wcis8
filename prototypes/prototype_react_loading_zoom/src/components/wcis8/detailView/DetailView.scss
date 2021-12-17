@@ -3,7 +3,6 @@
     inset: 0;
     display: none;
     justify-content: center;
-    overflow-y: scroll;
 
     &.visible {
         display: flex;
@@ -12,8 +11,8 @@
     }
 
     .detail-container-inner {
-        max-width: 80%;
         color: #fff;
+        overflow-y: scroll;
 
         padding-top: 2rem;
 
