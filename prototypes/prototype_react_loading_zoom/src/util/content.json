@@ -1,14 +1,14 @@
 {
   "labels" : {
     "rightCircle": {
-      "lines": [
+      "title_lines": [
         "Web-based",
         "Systems"
       ],
       "pos": [446.5, 185]
     },
     "leftCircle": {
-      "lines": [
+      "title_lines": [
         "Development &",
         "Engineering"
       ],
@@ -18,9 +18,10 @@
   "sections": {
     "leftTop": {
       "settings": {
+        "pos": [203.5, 90],
+        "title": "Coding",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/Coding.svg"
         }
       },
       "content": [
@@ -62,9 +63,10 @@
     },
     "leftLeft": {
       "settings": {
+        "pos": [81, 200],
+        "title": "DevOps",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/DevOps.svg"
         }
       },
       "content": [
@@ -102,9 +104,10 @@
     },
     "leftBottom": {
       "settings": {
+        "pos": [203.5, 325],
+        "title": "SWEG",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/AdvancedSE.svg"
         }
       },
       "content": [
@@ -142,9 +145,10 @@
     },
     "middle": {
       "settings": {
+        "pos": [0,0],
+        "title": "",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": ""
         }
       },
       "content": [
@@ -182,9 +186,10 @@
     },
     "rightTop": {
       "settings": {
+        "pos": [446.5, 90],
+        "title": "VR/AR",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/VRAR.svg"
         }
       },
       "content": [
@@ -222,9 +227,10 @@
     },
     "rightRight": {
       "settings": {
+        "pos": [565, 200],
+        "title": "E-Business",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/E-Biz.svg"
         }
       },
       "content": [
@@ -262,9 +268,10 @@
     },
     "rightBottom": {
       "settings": {
+        "pos": [446.5, 325],
+        "title": "Cloud",
         "icon": {
-          "path": "",
-          "pos": [203.5, 320]
+          "path": "./icons/Cloud.svg"
         }
       },
       "content": [
