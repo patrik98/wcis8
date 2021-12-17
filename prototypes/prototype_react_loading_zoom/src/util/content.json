@@ -26,11 +26,11 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
@@ -39,6 +39,23 @@
         {
           "type": "video",
           "text": ""
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "fontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "fontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
