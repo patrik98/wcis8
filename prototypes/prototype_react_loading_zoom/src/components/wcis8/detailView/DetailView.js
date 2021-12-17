@@ -116,8 +116,10 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     return (
         <Fragment>
             <div className={'detail-container'}>
+                <div className={'overview'}>
+                    {wcis8SelectedView(detailViewKey)}
+                </div>
                 <div className={'detail-container-inner'}>
-                    {wcis8SelectedView(contentObject.title)}
                     {contentObject.map((item, id) => (
                             <div key={id} className={'my-3'}>
                                 {renderContentObjects(item)}

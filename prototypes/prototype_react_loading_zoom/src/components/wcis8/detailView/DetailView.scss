@@ -4,19 +4,41 @@
     display: none;
     justify-content: center;
     overflow-y: scroll;
-}
 
-.detail-container.visible {
-    display: flex;
-    animation-name: blendIn;
-    animation-duration: 1.5s;
-}
+    &.visible {
+        display: flex;
+        animation-name: blendIn;
+        animation-duration: 1.5s;
+    }
 
-.detail-container-inner {
-    max-width: 80%;
-    color: #fff;
+    .detail-container-inner {
+        max-width: 80%;
+        color: #fff;
 
-    padding-top: 2rem;
+        padding-top: 2rem;
+
+        a {
+            display: inline-block;
+            padding: 0.8rem 2.2rem;
+
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-family: sans-serif;
+
+            border: 1px solid #fff;
+            cursor: pointer;
+
+            margin-bottom: 4rem;
+        }
+    }
+
+    & > .overview {
+        position:absolute;
+        left: 0;
+        bottom: 0;
+        padding: .2rem 1rem;
+    }
 }
 
 @keyframes blendIn {
@@ -31,17 +53,4 @@
     }
 }
 
-a {
-    display: inline-block;
-    padding: 0.8rem 2.2rem;
 
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-family: sans-serif;
-
-    border: 1px solid #fff;
-    cursor: pointer;
-
-    margin-bottom: 4rem;
-}
