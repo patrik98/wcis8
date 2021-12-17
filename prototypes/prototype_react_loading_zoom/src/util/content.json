@@ -1,37 +1,304 @@
 {
-  "leftTop": {
-    "title": "leftTop",
-    "text": "",
-    "type": "text"
+  "labels" : {
+    "rightCircle": {
+      "lines": [
+        "Web-based",
+        "Systems"
+      ],
+      "pos": [446.5, 185]
+    },
+    "leftCircle": {
+      "lines": [
+        "Development &",
+        "Engineering"
+      ],
+      "pos": [203.5, 185]
+    }
   },
-  "leftLeft": {
-    "title": "leftLeft",
-    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    "type": "text"
-  },
-  "leftBottom": {
-    "title": "leftBottom",
-    "text": "",
-    "type": "text"
-  },
-  "middle": {
-    "title": "middle",
-    "text": "",
-    "type": "video"
-  },
-  "rightTop": {
-    "title": "rightTop",
-    "text": "",
-    "type": "text"
-  },
-  "rightRight": {
-    "title": "rightRight",
-    "text": "",
-    "type": "text"
-  },
-  "rightBottom": {
-    "title": "rightBottom",
-    "text": "",
-    "type": "text"
+  "sections": {
+    "leftTop": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "eins",
+              "weight": 1
+            },
+            {
+              "text": "zwei",
+              "weight": 2
+            },
+            {
+              "text": "drei",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "leftLeft": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "leftBottom": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "middle": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "rightTop": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "rightRight": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    },
+    "rightBottom": {
+      "settings": {
+        "icon": {
+          "path": "",
+          "pos": [203.5, 320]
+        }
+      },
+      "content": [
+        {
+          "type": "title",
+          "text": "Hello World"
+        },
+        {
+          "type": "text",
+          "text": "Lorem Ipsum ..."
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "weight": 1
+            },
+            {
+              "text": "xyz",
+              "weight": 3
+            }
+          ]
+        }
+      ]
+    }
   }
 }

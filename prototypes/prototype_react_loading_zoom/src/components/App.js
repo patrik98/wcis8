@@ -33,14 +33,14 @@ function App() {
     return (
         <Fragment>
             <DetailViewContext.Provider value={{detailViewKey, setDetailViewKey}}>
-                <div>
+                <div className={'wcis8-container'}>
                     <div className={'view-container'}>
                         <svg id="view-box" viewBox="-100 -100 800 600">
-                            <WCIS8 viewBox={viewBox} onResetZoom={setDefaultView}></WCIS8>
-                            {isLoading && <LoadingAnimation></LoadingAnimation>}
+                            <WCIS8 viewBox={viewBox} onResetZoom={setDefaultView}/>
+                            {isLoading && <LoadingAnimation />}
                         </svg>
                     </div>
-                    <DetailView detailViewKey={detailViewKey} onResetZoom={setDefaultView} content={content}></DetailView>
+                    <DetailView detailViewKey={detailViewKey} onResetZoom={setDefaultView} content={content} />
                 </div>
             </DetailViewContext.Provider>
 
