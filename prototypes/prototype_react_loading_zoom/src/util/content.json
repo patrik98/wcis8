@@ -34,11 +34,12 @@
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
         },
         {
           "type": "wordCloud",
@@ -46,13 +47,15 @@
             {
               "text": "abc",
               "settings": {
-                "fontSize": 12
+                "minFontSize": 12,
+                "maxFontSize": 12
               }
             },
             {
               "text": "xyz",
               "settings": {
-                "fontSize": 17
+                "minFontSize": 17,
+                "maxFontSize": 17
               }
             }
           ]
@@ -69,19 +72,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
@@ -95,19 +118,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
@@ -121,19 +164,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
@@ -147,19 +210,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
@@ -173,19 +256,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     },
@@ -199,19 +302,39 @@
       "content": [
         {
           "type": "title",
-          "text": ""
+          "text": "Hello World"
         },
         {
           "type": "text",
-          "text": ""
+          "text": "Lorem Ipsum ..."
         },
         {
           "type": "image",
-          "path": ""
+          "url": "https://picsum.photos/200/300",
+          "altText": ""
         },
         {
           "type": "video",
-          "text": ""
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "wordCloud",
+          "wordList": [
+            {
+              "text": "abc",
+              "settings": {
+                "minFontSize": 12,
+                "maxFontSize": 12
+              }
+            },
+            {
+              "text": "xyz",
+              "settings": {
+                "minFontSize": 17,
+                "maxFontSize": 17
+              }
+            }
+          ]
         }
       ]
     }
