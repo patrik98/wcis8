@@ -34,17 +34,11 @@ function DetailView({detailViewKey, onResetZoom, content}) {
             "wordList": [
                 {
                     "text": "abc",
-                    "settings": {
-                        "minFontSize": 12,
-                        "maxFontSize": 12
-                    }
+                    "weight": 1
                 },
                 {
                     "text": "xyz",
-                    "settings": {
-                        "minFontSize": 17,
-                        "maxFontSize": 17
-                    }
+                    "weight": 3
                 }
             ]
         }
@@ -112,7 +106,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
             case "wordCloud":
                 return (
                     <Cloud
-                        contentArray={contentObject.wordList.map(item => item.text)}/>);
+                        contentArray={contentObject.wordList}/>);
             default:
                 return null;
         }

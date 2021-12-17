@@ -26,7 +26,7 @@
       "content": [
         {
           "type": "title",
-          "text": "Hello World Left Top"
+          "text": "Hello World"
         },
         {
           "type": "text",
@@ -38,19 +38,6 @@
           "altText": ""
         },
         {
-          "type": "image",
-          "url": "https://picsum.photos/600/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
           "type": "video",
           "url": "https://www.youtube.com/embed/GXjyX-El1mU"
         },
@@ -58,18 +45,16 @@
           "type": "wordCloud",
           "wordList": [
             {
-              "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "text": "eins",
+              "weight": 1
             },
             {
-              "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "text": "zwei",
+              "weight": 2
+            },
+            {
+              "text": "drei",
+              "weight": 3
             }
           ]
         }
@@ -105,17 +90,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }
@@ -151,17 +130,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }
@@ -197,17 +170,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }
@@ -243,17 +210,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }
@@ -289,17 +250,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }
@@ -335,17 +290,11 @@
           "wordList": [
             {
               "text": "abc",
-              "settings": {
-                "minFontSize": 12,
-                "maxFontSize": 12
-              }
+              "weight": 1
             },
             {
               "text": "xyz",
-              "settings": {
-                "minFontSize": 17,
-                "maxFontSize": 17
-              }
+              "weight": 3
             }
           ]
         }

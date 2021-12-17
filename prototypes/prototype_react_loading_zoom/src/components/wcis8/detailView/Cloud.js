@@ -6,13 +6,15 @@ import {TagCloud} from 'react-tagcloud'
 function Cloud({contentArray}) {
 
     const colors = ["#FFFFFF"] //array containing different colors for words in cloud
+    const maxWeight = Math.max(...contentArray.map(item => item.weight));
+    const weightSteps = 1 / maxWeight
 
     function createData(minSize, maxSize) {
         let data = [];
         contentArray.forEach(content => {
             data.push({
-                value: <div>{content}</div>,
-                count: Math.floor(Math.random() * (maxSize - minSize + 1) + minSize),
+                value: <div>{content.text}</div>,
+                count: Math.floor(((maxSize - minSize) / weightSteps * content.weight) + minSize),
                 color: colors[Math.floor(Math.random() * colors.length)]
             })
         })
@@ -30,7 +32,7 @@ function Cloud({contentArray}) {
                 }}
                 shuffle
                 tags={createData(20, 40)}
-                onClick={tag => alert(tag)}
+                onClick={tag => alert(tag.text)}
             />
         </div>
 
