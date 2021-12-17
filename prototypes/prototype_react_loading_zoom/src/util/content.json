@@ -26,7 +26,7 @@
       "content": [
         {
           "type": "title",
-          "text": "Hello World"
+          "text": "Hello World Left Top"
         },
         {
           "type": "text",
@@ -36,6 +36,19 @@
           "type": "image",
           "url": "https://picsum.photos/200/300",
           "altText": ""
+        },
+        {
+          "type": "image",
+          "url": "https://picsum.photos/600/300",
+          "altText": ""
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
         },
         {
           "type": "video",

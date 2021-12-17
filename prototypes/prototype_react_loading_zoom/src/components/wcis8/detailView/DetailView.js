@@ -50,11 +50,19 @@ function DetailView({detailViewKey, onResetZoom, content}) {
         }
     ])
 
+    const isContentAndKeyValid = () => {
+        const hasValidSection = content.hasOwnProperty('sections') && content.sections;
+        const hasValidKey = !!hasValidSection && content.sections.hasOwnProperty(detailViewKey) && content.sections[detailViewKey];
+        const hasValidContent = !!hasValidKey && content.sections[detailViewKey].hasOwnProperty('content');
+
+        return !!hasValidContent;
+    }
+
     useEffect(() => {
         const detailContainer = document.querySelector('.detail-container');
         if (detailViewKey && detailViewKey.length > 0) {
-            if (content && content.hasOwnProperty('sections') && content.sections && content.sections.hasOwnProperty(detailViewKey) && content.sections[detailViewKey].hasOwnProperty(content) && content.sections[detailViewKey].content) {
-                setContentObject(content[detailViewKey].content)
+            if (isContentAndKeyValid()) {
+                setContentObject(content.sections[detailViewKey].content)
             }
 
             detailContainer.classList.add('visible');
@@ -114,9 +122,15 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     return (
         <Fragment>
             <div className={'detail-container'}>
-                <div className={'detail-text'}>
+                <div className={'detail-container-inner'}>
                     {wcis8SelectedView(contentObject.title)}
-                    {contentObject.map(item => renderContentObjects(item))}
+                    {contentObject.map((item, id) => (
+                            <div key={id} className={'my-3'}>
+                                {renderContentObjects(item)}
+                            </div>
+                        )
+                    )}
+
                     <a onClick={onBackButtonClick} type={'button'} className={'mt-4'}>
                         Zurück
                     </a>

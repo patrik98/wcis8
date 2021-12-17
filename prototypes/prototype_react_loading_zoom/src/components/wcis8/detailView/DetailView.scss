@@ -3,7 +3,7 @@
     inset: 0;
     display: none;
     justify-content: center;
-    align-items: center;
+    overflow-y: scroll;
 }
 
 .detail-container.visible {
@@ -12,10 +12,11 @@
     animation-duration: 1.5s;
 }
 
-.detail-text {
+.detail-container-inner {
     max-width: 80%;
-
     color: #fff;
+
+    padding-top: 2rem;
 }
 
 @keyframes blendIn {
@@ -41,4 +42,6 @@ a {
 
     border: 1px solid #fff;
     cursor: pointer;
+
+    margin-bottom: 4rem;
 }
