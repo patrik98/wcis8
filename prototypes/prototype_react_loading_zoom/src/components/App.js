@@ -40,7 +40,7 @@ function App() {
                             {isLoading && <LoadingAnimation />}
                         </svg>
                     </div>
-                    <DetailView detailViewKey={detailViewKey} onResetZoom={setDefaultView} content={content} />
+                    <DetailView detailViewKey={detailViewKey} onResetZoom={setDefaultView} content={content}/>
                 </div>
             </DetailViewContext.Provider>
 

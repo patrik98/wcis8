@@ -24,38 +24,69 @@
           "path": "./icons/Coding.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "eins",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "zwei",
-              "weight": 2
+              "type": "text",
+              "text": "Lorem Ipsum ..."
             },
             {
-              "text": "drei",
-              "weight": 3
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -69,34 +100,69 @@
           "path": "./icons/DevOps.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -110,34 +176,69 @@
           "path": "./icons/AdvancedSE.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -151,34 +252,69 @@
           "path": ""
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -192,34 +328,69 @@
           "path": "./icons/VRAR.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -233,34 +404,69 @@
           "path": "./icons/E-Biz.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
@@ -274,34 +480,69 @@
           "path": "./icons/Cloud.svg"
         }
       },
-      "content": [
+      "tabs": [
         {
-          "type": "title",
-          "text": "Hello World"
-        },
-        {
-          "type": "text",
-          "text": "Lorem Ipsum ..."
-        },
-        {
-          "type": "image",
-          "url": "https://picsum.photos/200/300",
-          "altText": ""
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-        },
-        {
-          "type": "wordCloud",
-          "wordList": [
+          "name":  "Tab 1",
+          "content": [
             {
-              "text": "abc",
-              "weight": 1
+              "type": "title",
+              "text": "Hello World"
             },
             {
-              "text": "xyz",
-              "weight": 3
+              "type": "text",
+              "text": "Lorem Ipsum ..."
+            },
+            {
+              "type": "image",
+              "url": "https://picsum.photos/200/300",
+              "altText": ""
+            },
+            {
+              "type": "video",
+              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name":  "Tab 2",
+          "content": [
+            {
+              "type": "title",
+              "text": "Hello World"
+            },
+            {
+              "type": "wordCloud",
+              "wordList": [
+                {
+                  "text": "eins",
+                  "weight": 1
+                },
+                {
+                  "text": "zwei",
+                  "weight": 2
+                },
+                {
+                  "text": "drei",
+                  "weight": 3
+                }
+              ]
             }
           ]
         }
