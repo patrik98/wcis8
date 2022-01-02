@@ -5,7 +5,7 @@ import {TagCloud} from 'react-tagcloud'
 
 function Cloud({contentArray}) {
 
-    const colors = ["#FFFFFF"] //array containing different colors for words in cloud
+    const colors = ["#000000"] //array containing different colors for words in cloud
     const maxWeight = Math.max(...contentArray.map(item => item.weight));
     const weightSteps = 1 / maxWeight
 
