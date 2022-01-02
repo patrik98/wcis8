@@ -8,9 +8,78 @@ import Section4 from './mini8Assets/WCIS8_section4.svg';
 import Section5 from './mini8Assets/WCIS8_section5.svg';
 import Section6 from './mini8Assets/WCIS8_section6.svg';
 import Section7 from './mini8Assets/WCIS8_section7.svg';
+import Tabs from "../../../util/Tabs";
 
 
 function DetailView({detailViewKey, onResetZoom, content}) {
+    const [tabList, setTabList] = useState([
+        {
+            "name": "Tab 1",
+            "content": [
+                {
+                    "type": "title",
+                    "text": "Hello World"
+                },
+                {
+                    "type": "text",
+                    "text": "Lorem Ipsum ..."
+                },
+                {
+                    "type": "image",
+                    "url": "https://picsum.photos/200/300",
+                    "altText": ""
+                },
+                {
+                    "type": "video",
+                    "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+                },
+                {
+                    "type": "wordCloud",
+                    "wordList": [
+                        {
+                            "text": "eins",
+                            "weight": 1
+                        },
+                        {
+                            "text": "zwei",
+                            "weight": 2
+                        },
+                        {
+                            "text": "drei",
+                            "weight": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tab 2",
+            "content": [
+                {
+                    "type": "title",
+                    "text": "Hello World"
+                },
+                {
+                    "type": "wordCloud",
+                    "wordList": [
+                        {
+                            "text": "eins",
+                            "weight": 1
+                        },
+                        {
+                            "text": "zwei",
+                            "weight": 2
+                        },
+                        {
+                            "text": "drei",
+                            "weight": 3
+                        }
+                    ]
+                }
+            ]
+        }
+    ])
+    const [tabIndex, setTabIndex] = useState(0)
     const [contentObject, setContentObject] = useState([
         {
             "type": "title",
@@ -44,29 +113,43 @@ function DetailView({detailViewKey, onResetZoom, content}) {
         }
     ])
 
-    const isContentAndKeyValid = () => {
-        const hasValidSection = content.hasOwnProperty('sections') && content.sections;
-        const hasValidKey = !!hasValidSection && content.sections.hasOwnProperty(detailViewKey) && content.sections[detailViewKey];
-        const hasValidContent = !!hasValidKey && content.sections[detailViewKey].hasOwnProperty('content');
+    useEffect(() => {
+        if (tabList && Array.isArray(tabList) && tabList.length > 0) {
+            const tabContent = tabIndex >= 0 && tabIndex < tabList.length ? tabList[tabIndex] : 0;
+            setContentObject(tabContent.content);
 
-        return !!hasValidContent;
+        }
+    }, [tabList, tabIndex])
+
+    const isContentAndKeyValid = () => {
+        const hasValidSection = !!(content.hasOwnProperty('sections') && content.sections);
+        const hasValidKey = !!(hasValidSection && content.sections.hasOwnProperty(detailViewKey) && content.sections[detailViewKey]);
+        const hasValidTabs = !!(hasValidKey && content.sections[detailViewKey].hasOwnProperty('tabs') && content.sections[detailViewKey].tabs);
+
+        return !!hasValidTabs;
     }
 
     useEffect(() => {
         const detailContainer = document.querySelector('.detail-container');
         if (detailViewKey && detailViewKey.length > 0) {
             if (isContentAndKeyValid()) {
-                setContentObject(content.sections[detailViewKey].content)
+                setTabIndex(0)
+                setTabList(content.sections[detailViewKey].tabs)
+                detailContainer.classList.add('visible');
+                return;
             }
-
-            detailContainer.classList.add('visible');
-        } else {
-            detailContainer.classList.remove('visible');
         }
+
+        detailContainer.classList.remove('visible');
     }, [detailViewKey])
 
     const onBackButtonClick = () => {
         onResetZoom()
+    }
+
+    const onTabChange = (tabIndex) => {
+        console.log(tabIndex)
+        setTabIndex(tabIndex)
     }
 
     function wcis8SelectedView(value) {
@@ -100,7 +183,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                 return (<iframe width="560" height="315" src={contentObject.url}
                                 title="YouTube video player" frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen />);
+                                allowFullScreen/>);
             case "image":
                 return (<img src={contentObject.url} alt={contentObject.altText ? contentObject.altText : ''}/>);
             case "wordCloud":
@@ -120,6 +203,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                     {wcis8SelectedView(detailViewKey)}
                 </div>
                 <div className={'detail-container-inner'}>
+                    <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
                     {contentObject.map((item, id) => (
                             <div key={id} className={'my-3'}>
                                 {renderContentObjects(item)}
