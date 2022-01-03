@@ -1,18 +1,54 @@
 {
   "labels" : {
     "rightCircle": {
-      "title_lines": [
-        "Web-based",
-        "Systems"
-      ],
-      "pos": [446.5, 185]
+      "settings":  {
+        "top": {
+          "lines": [
+            "Strategic",
+            "Management"
+          ],
+          "pos": [446.5, -50]
+        },
+        "center": {
+          "lines": [
+            "Web-based",
+            "Systems"
+          ],
+          "pos": [446.5, 175]
+        },
+        "bottom": {
+          "lines": [
+            "Scientific",
+            "Foundation"
+          ],
+          "pos": [446.5, 410]
+        }
+      }
     },
     "leftCircle": {
-      "title_lines": [
-        "Development &",
-        "Engineering"
-      ],
-      "pos": [203.5, 185]
+      "settings":  {
+        "top": {
+          "lines": [
+            "Project",
+            "Management"
+          ],
+          "pos": [203.5, -50]
+        },
+        "center": {
+          "lines": [
+            "Development &",
+            "Engineering"
+          ],
+          "pos": [203.5, 175]
+        },
+        "bottom": {
+          "lines": [
+            "Practical",
+            "Application"
+          ],
+          "pos": [203.5, 410]
+        }
+      }
     }
   },
   "sections": {

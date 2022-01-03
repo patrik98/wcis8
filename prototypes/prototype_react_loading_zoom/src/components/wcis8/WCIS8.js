@@ -3,6 +3,7 @@ import './WCIS8.scss';
 import InteractivePath from "./interactivePath/InteractivePath";
 import SectionIcon from "./sectionSettings/SectionIcon";
 import SectionTitle from "./sectionSettings/SectionTitle";
+import CircleTitle from "./sectionSettings/CircleTitle"
 
 function WCIS8({viewBox, onResetZoom, content}) {
 
@@ -29,6 +30,15 @@ function WCIS8({viewBox, onResetZoom, content}) {
             <path id="Background" className="cls-1"
                   d="M540.79,94.57a202.12,202.12,0,0,0-119.85,39.17A202.07,202.07,0,0,0,301.1,94.57C189,94.57,98,185.49,98,297.64S189,500.71,301.1,500.71a202.07,202.07,0,0,0,119.84-39.17,202.12,202.12,0,0,0,119.85,39.17c112.15,0,203.07-90.92,203.07-203.07S652.94,94.57,540.79,94.57Z"
                   transform="translate(-98.03 -94.57)"/>
+
+            <CircleTitle content={content.labels.leftCircle.settings.top} css_class={'top'}></CircleTitle>
+            <CircleTitle content={content.labels.leftCircle.settings.center} css_class={'center'}></CircleTitle>
+            <CircleTitle content={content.labels.leftCircle.settings.bottom} css_class={'bottom'}></CircleTitle>
+            
+            <CircleTitle content={content.labels.rightCircle.settings.top} css_class={'top'}></CircleTitle>
+            <CircleTitle content={content.labels.rightCircle.settings.center} css_class={'center'}></CircleTitle>
+            <CircleTitle content={content.labels.rightCircle.settings.bottom} css_class={'bottom'}></CircleTitle>
+
             <InteractivePath viewBox={viewBox} onResetZoom={onResetZoom} contentKey={'rightRight'}>
                 <path className="cls-2" id="section-1"
                       d="M655.89,182.54l-60.7,60.7a76.93,76.93,0,0,1,0,108.79l60.7,60.7A162.78,162.78,0,0,0,655.89,182.54Z"

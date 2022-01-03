@@ -35,7 +35,7 @@ function App() {
             <DetailViewContext.Provider value={{detailViewKey, setDetailViewKey}}>
                 <div className={'wcis8-container'}>
                     <div className={'view-container'}>
-                        <svg id="view-box" viewBox="-100 -100 800 600">
+                        <svg id="view-box" viewBox="-230 -100 1100 600">
                             <WCIS8 content={content} viewBox={viewBox} onResetZoom={setDefaultView}/>
                             {isLoading && <LoadingAnimation />}
                         </svg>
