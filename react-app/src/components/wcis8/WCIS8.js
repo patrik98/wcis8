@@ -11,16 +11,39 @@ function WCIS8({viewBox, onResetZoom, content}) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
+
+
     useEffect(() => {
+
+        let randomSectionIds = [];
+
         const interval = setInterval(() => {
-            const sectionName = "section-" + randomInteger(1, 5);
+            if (randomSectionIds.length === 0) {
+                randomSectionIds = shuffle([1, 2, 3, 4, 5, 6, 7]); //shuffles section ids --> each section for one round
+            }
+
+            const sectionName = "section-" + randomSectionIds.pop();
+
             const section = document.getElementById(sectionName);
             section.style.animation = "shake";
             section.style.animationDuration = "1.3s";
             setTimeout(() => {
                 section.style.animation = "none";
             }, 1000)
-        },  randomInteger(4000, 6000));
+        }, randomInteger(4000, 6000));
         return () => clearInterval(interval);
     }, []);
 
@@ -34,7 +57,7 @@ function WCIS8({viewBox, onResetZoom, content}) {
             <CircleTitle content={content.labels.leftCircle.settings.top} css_class={'top'}></CircleTitle>
             <CircleTitle content={content.labels.leftCircle.settings.center} css_class={'center'}></CircleTitle>
             <CircleTitle content={content.labels.leftCircle.settings.bottom} css_class={'bottom'}></CircleTitle>
-            
+
             <CircleTitle content={content.labels.rightCircle.settings.top} css_class={'top'}></CircleTitle>
             <CircleTitle content={content.labels.rightCircle.settings.center} css_class={'center'}></CircleTitle>
             <CircleTitle content={content.labels.rightCircle.settings.bottom} css_class={'bottom'}></CircleTitle>
