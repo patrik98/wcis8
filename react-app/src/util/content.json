@@ -86,7 +86,7 @@
               "wordList": [
                 {
                   "text": "eins",
-                  "weight": 1
+                  "weight": 7
                 },
                 {
                   "text": "zwei",
@@ -95,6 +95,54 @@
                 {
                   "text": "drei",
                   "weight": 3
+                },
+                {
+                  "text": "fünf",
+                  "weight": 5
+                },
+                {
+                  "text": "acht",
+                  "weight": 3
+                },
+                {
+                  "text": "siebzehn",
+                  "weight": 3
+                },
+                {
+                  "text": "Frankreich",
+                  "weight": 7
+                },
+                {
+                  "text": "London",
+                  "weight": 3
+                },
+                {
+                  "text": "Paris",
+                  "weight": 3
+                },
+                {
+                  "text": "Venezuela",
+                  "weight": 5
+                },
+                {
+                  "text": "USA",
+                  "weight":6
+                },
+                {
+                  "text": "Kanada",
+                  "weight": 7
+                },
+                {
+                  "text": "Griechenland",
+                  "weight": 3
+                },
+                {
+                  "text": "Deutschland",
+                  "weight": 2
+                },
+                {
+                  "text": "Spanien",
+                  "weight": 8
                 }
               ]
             }
