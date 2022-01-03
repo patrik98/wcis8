@@ -1,32 +1,15 @@
 image: node:lts
 
-# plain html,css,js deployment with webpack
-# 
-# cache:
-#   paths:
-#     - node_modules/
-
-# pages:
-#   stage: deploy
-#   script:
-#   - npm install
-#   - npm run build-gitlab
-#   artifacts:
-#     paths:
-#     - public
-#   only:
-#   - master
-
 # react-app deployment
 pages:
   stage: deploy
   before_script:
-    - cd prototypes/prototype_react_loading_zoom
+    - cd react-app
   script:
     - npm install
     - npm run build-ci
-    - rm -rf ../../public
-    - mv build ../../public
+    - rm -rf ../public
+    - mv build ../public
   artifacts:
     paths:
       - public
