@@ -155,19 +155,19 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     function wcis8SelectedView(value) {
         switch (value) {
             case "rightTop":
-                return (<img style={{width: "20%"}} src={Section1} alt="Section 1"/>);
+                return (<img src={Section1} alt="Section 1"/>);
             case "rightRight":
-                return (<img style={{width: "20%"}} src={Section2} alt="Section 2"/>);
+                return (<img src={Section2} alt="Section 2"/>);
             case "rightBottom":
-                return (<img style={{width: "20%"}} src={Section3} alt="Section 3"/>);
+                return (<img src={Section3} alt="Section 3"/>);
             case "middle":
-                return (<img style={{width: "20%"}} src={Section4} alt="Section 4"/>);
+                return (<img src={Section4} alt="Section 4"/>);
             case "leftTop":
-                return (<img style={{width: "20%"}} src={Section5} alt="Section 5"/>);
+                return (<img src={Section5} alt="Section 5"/>);
             case "leftLeft":
-                return (<img style={{width: "20%"}} src={Section6} alt="Section 6"/>);
+                return (<img src={Section6} alt="Section 6"/>);
             case "leftBottom":
-                return (<img style={{width: "20%"}} src={Section7} alt="Section 7ç"/>);
+                return (<img src={Section7} alt="Section 7"/>);
         }
     }
 
@@ -200,7 +200,10 @@ function DetailView({detailViewKey, onResetZoom, content}) {
         <Fragment>
             <div className={'detail-container'}>
                 <div className={'overview'}>
-                    {wcis8SelectedView(detailViewKey)}
+                        <a onClick={onBackButtonClick} type={'button'} className={''}>
+                            zurück zur
+                        </a>
+                        {wcis8SelectedView(detailViewKey)}
                 </div>
                 <div className={'detail-container-inner'}>
                     <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
@@ -210,10 +213,6 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                             </div>
                         )
                     )}
-
-                    <a onClick={onBackButtonClick} type={'button'} className={'mt-4'}>
-                        Zurück
-                    </a>
                 </div>
             </div>
         </Fragment>
