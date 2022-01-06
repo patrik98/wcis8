@@ -75,7 +75,8 @@
             {
               "type": "image",
               "url": "https://picsum.photos/200/300",
-              "altText": ""
+              "altText": "",
+              "width": "full"
             },
             {
               "type": "video",

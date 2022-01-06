@@ -38,6 +38,11 @@
 
             margin-bottom: 4rem;
         }
+        img {
+            &.full {
+                width: 100%;
+            }
+        }
     }
 
     & > .overview {

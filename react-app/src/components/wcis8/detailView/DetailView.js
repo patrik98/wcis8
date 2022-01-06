@@ -185,7 +185,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen/>);
             case "image":
-                return (<img src={contentObject.url} alt={contentObject.altText ? contentObject.altText : ''}/>);
+                return (<img src={contentObject.url} alt={contentObject.altText ? contentObject.altText : ''} className={contentObject.width ? contentObject.width : ''}/>);
             case "wordCloud":
                 return (
                     <Cloud
