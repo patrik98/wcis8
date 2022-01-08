@@ -4,11 +4,7 @@
     display: none;
     justify-content: center;
 
-    background-color: white;
-
-    border-width: 1.2rem;
-    border-style: solid;
-    border-color: blue;
+    background: linear-gradient(to right, #93c12f, #4abfd8);
 
     &.visible {
         display: flex;
@@ -16,13 +12,28 @@
         animation-duration: 1.5s;
     }
 
+    .content-tabs {
+        display: flex;
+        width: auto;
+        width: 100%;
+        margin: 1rem;
+        padding: 1rem 2rem;
+        list-style: none;
+
+        li {
+            display: inline;
+        }
+    }
+
     .detail-container-inner {
         color: #000;
         overflow-y: scroll;
         width: 100%;
+        margin: 1rem;
         padding: 1rem 2rem;
-
         padding-top: 2rem;
+
+        background: white;
 
         a {
             display: inline-block;
@@ -47,8 +58,8 @@
 
     & > .overview {
         position:absolute;
-        right: 0;
-        bottom: 0;
+        right: 2.3rem;
+        bottom: 0.5rem;
         padding: .2rem 1rem;
 
         a {
