@@ -9,6 +9,9 @@ import Section5 from './mini8Assets/WCIS8_section5.svg';
 import Section6 from './mini8Assets/WCIS8_section6.svg';
 import Section7 from './mini8Assets/WCIS8_section7.svg';
 import Tabs from "../../../util/Tabs";
+import TwoColumn from "./twoColumn/TwoColumn";
+import Image from "./Image";
+import Video from "./Video";
 
 
 function DetailView({detailViewKey, onResetZoom, content}) {
@@ -180,16 +183,15 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                     {contentObject.text}
                 </p>);
             case "video":
-                return (<iframe width="560" height="315" src={contentObject.url}
-                                title="YouTube video player" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen/>);
+                return (<Video content={contentObject} />);
             case "image":
-                return (<img src={contentObject.url} alt={contentObject.altText ? contentObject.altText : ''} className={contentObject.width ? contentObject.width : ''}/>);
+                return (<Image content={contentObject} />);
             case "wordCloud":
                 return (
                     <Cloud
                         contentArray={contentObject.wordList}/>);
+            case "twoColumn":
+                return (<TwoColumn content={contentObject} />);
             default:
                 return null;
         }
