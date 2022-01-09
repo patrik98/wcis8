@@ -9,6 +9,7 @@ import Section5 from './mini8Assets/WCIS8_section5.svg';
 import Section6 from './mini8Assets/WCIS8_section6.svg';
 import Section7 from './mini8Assets/WCIS8_section7.svg';
 import Tabs from "../../../util/Tabs";
+import TwoColumn from "./twoColumn/TwoColumn";
 import Image from "./Image";
 import Video from "./Video";
 
@@ -189,6 +190,8 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                 return (
                     <Cloud
                         contentArray={contentObject.wordList}/>);
+            case "twoColumn":
+                return (<TwoColumn content={contentObject} />);
             default:
                 return null;
         }
