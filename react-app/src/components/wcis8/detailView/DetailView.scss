@@ -12,17 +12,43 @@
         animation-duration: 1.5s;
     }
 
-    .content-tabs {
+    .tabs-container {
+        position: absolute;
         display: flex;
-        width: auto;
+        flex-wrap: nowrap;
+        flex-direction: row;
         width: 100%;
-        margin: 1rem;
-        padding: 1rem 2rem;
-        list-style: none;
+        padding: 1rem 1rem 0 0;
+        background: none;
+    }
+
+    .tabs {
+        li::before {
+            content: '' !important;
+        }
 
         li {
             display: inline;
+            padding-right: 2rem;
+            border-right: 2px solid white;
+            color: white;
+            font-size: larger;
         }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li:hover {
+            cursor: pointer;
+            font-weight: bolder;
+        }
+    }
+
+    .whitespace {
+        flex: 1;
+        background: white;
+        height: 3rem;
     }
 
     .detail-container-inner {
@@ -30,11 +56,10 @@
         overflow-y: scroll;
         width: 100%;
         margin: 1rem;
-        padding: 1rem 2rem;
-        padding-top: 2rem;
-
+        margin-top: 4rem;
+        padding: 2rem;
         background: white;
-
+        
         a {
             display: inline-block;
             padding: 0.8rem 2.2rem;
