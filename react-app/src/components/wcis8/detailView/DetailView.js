@@ -207,8 +207,13 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                         </a>
                         {wcis8SelectedView(detailViewKey)}
                 </div>
-                <div className={'detail-container-inner'}>
+
+                <div className={'tabs-container'}>
                     <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
+                    <div className={'whitespace'}></div>
+                </div>
+
+                <div className={'detail-container-inner'}>
                     {contentObject.map((item, id) => (
                             <div key={id} className={'my-3'}>
                                 {renderContentObjects(item)}
