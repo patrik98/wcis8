@@ -158,19 +158,19 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     function wcis8SelectedView(value) {
         switch (value) {
             case "rightTop":
-                return (<img src={Section1} alt="Section 1"/>);
+                return (<img src={Section1} alt="Section 1" onClick={onBackButtonClick}/>);
             case "rightRight":
-                return (<img src={Section2} alt="Section 2"/>);
+                return (<img src={Section2} alt="Section 2" onClick={onBackButtonClick}/>);
             case "rightBottom":
-                return (<img src={Section3} alt="Section 3"/>);
+                return (<img src={Section3} alt="Section 3" onClick={onBackButtonClick}/>);
             case "middle":
-                return (<img src={Section4} alt="Section 4"/>);
+                return (<img src={Section4} alt="Section 4" onClick={onBackButtonClick}/>);
             case "leftTop":
-                return (<img src={Section5} alt="Section 5"/>);
+                return (<img src={Section5} alt="Section 5" onClick={onBackButtonClick}/>);
             case "leftLeft":
-                return (<img src={Section6} alt="Section 6"/>);
+                return (<img src={Section6} alt="Section 6" onClick={onBackButtonClick}/>);
             case "leftBottom":
-                return (<img src={Section7} alt="Section 7"/>);
+                return (<img src={Section7} alt="Section 7" onClick={onBackButtonClick}/>);
         }
     }
 
