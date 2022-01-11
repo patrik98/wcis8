@@ -2,7 +2,8 @@
     position: absolute;
     inset: 0;
     display: none;
-    justify-content: center;
+    // justify-content: center;
+    flex-direction: column;
 
     background: linear-gradient(to right, #93c12f, #4abfd8);
 
@@ -13,18 +14,19 @@
     }
 
     .tabs-container {
-        position: absolute;
+        position: sticky;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: row;
-        width: 100%;
-        padding: 1rem 1rem 0 0;
         background: none;
+        margin: 1rem 1rem 0 1rem;
     }
 
     .tabs {
+        padding: 1rem 0 1rem 0;
+
         li::before {
-            content: '' !important;
+            content: none !important;
         }
 
         li {
@@ -48,15 +50,15 @@
     .whitespace {
         flex: 1;
         background: white;
-        height: 3rem;
     }
 
     .detail-container-inner {
+        position: static;
         color: #000;
         overflow-y: scroll;
-        width: 100%;
+        height: 100%;
         margin: 1rem;
-        margin-top: 4rem;
+        margin-top: 0;
         padding: 2rem;
         background: white;
         
@@ -74,6 +76,7 @@
 
             margin-bottom: 4rem;
         }
+
         img {
             &.full {
                 width: 100%;
@@ -82,10 +85,11 @@
     }
 
     & > .overview {
-        position:absolute;
+        position: absolute;
         right: 2.3rem;
         bottom: 0.5rem;
         padding: .2rem 1rem;
+        z-index: 1;
 
         a {
             display: inline-block;
@@ -98,6 +102,10 @@
             font-weight: bolder;
 
             margin-bottom: -0.8rem;
+            cursor: pointer;
+        }
+
+        img:hover {
             cursor: pointer;
         }
     }
