@@ -2,7 +2,6 @@
     position: absolute;
     inset: 0;
     display: none;
-    // justify-content: center;
     flex-direction: column;
 
     background: linear-gradient(to right, #93c12f, #4abfd8);
@@ -13,43 +12,21 @@
         animation-duration: 1.5s;
     }
 
-    .tabs-container {
-        position: sticky;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        background: none;
-        margin: 1rem 1rem 0 1rem;
-    }
-
     .tabs {
-        padding: 1rem 0 1rem 0;
-
-        li::before {
-            content: none !important;
-        }
-
-        li {
-            display: inline;
-            padding-right: 2rem;
+        div {
+            padding-left: 2rem;
+            padding-right: 3rem;
             border-right: 2px solid white;
             color: white;
-            font-size: larger;
         }
-
-        li:last-child {
+        div:last-child {
             border-right: none;
         }
 
-        li:hover {
+        div:hover {
             cursor: pointer;
-            font-weight: bolder;
+            text-decoration-line: underline;
         }
-    }
-
-    .whitespace {
-        flex: 1;
-        background: white;
     }
 
     .detail-container-inner {
@@ -122,5 +99,3 @@
         opacity: 1;
     }
 }
-
-
