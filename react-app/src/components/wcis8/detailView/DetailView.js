@@ -8,7 +8,7 @@ import Section4 from './mini8Assets/WCIS8_section4.svg';
 import Section5 from './mini8Assets/WCIS8_section5.svg';
 import Section6 from './mini8Assets/WCIS8_section6.svg';
 import Section7 from './mini8Assets/WCIS8_section7.svg';
-import Tabs from "../../../util/Tabs";
+import Tabs from "./tabs/Tabs";
 import TwoColumn from "./twoColumn/TwoColumn";
 import FiveColumn from './fiveColumn/FiveColumn';
 import Image from "./Image";
@@ -211,10 +211,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                         {wcis8SelectedView(detailViewKey)}
                 </div>
 
-                <div className={'tabs-container'}>
-                    <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
-                    <div className={'whitespace'}></div>
-                </div>
+                <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
 
                 <div className={'detail-container-inner'}>
                     {contentObject.map((item, id) => (
