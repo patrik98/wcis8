@@ -21,7 +21,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "build-ci": "CI=false && react-scripts build"
+    "build-ci": "CI=false && craco build"
   },
   "eslintConfig": {
     "extends": [
