@@ -10,6 +10,7 @@ import Section6 from './mini8Assets/WCIS8_section6.svg';
 import Section7 from './mini8Assets/WCIS8_section7.svg';
 import Tabs from "../../../util/Tabs";
 import TwoColumn from "./twoColumn/TwoColumn";
+import FiveColumn from './fiveColumn/FiveColumn';
 import Image from "./Image";
 import Video from "./Video";
 
@@ -192,6 +193,8 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                         contentArray={contentObject.wordList}/>);
             case "twoColumn":
                 return (<TwoColumn content={contentObject} />);
+            case "fiveColumn":
+                return (<FiveColumn content={contentObject} />);
             default:
                 return null;
         }
@@ -215,7 +218,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
 
                 <div className={'detail-container-inner'}>
                     {contentObject.map((item, id) => (
-                            <div key={id} className={'my-3'}>
+                            <div key={id} className={'my-0'}>
                                 {renderContentObjects(item)}
                             </div>
                         )
