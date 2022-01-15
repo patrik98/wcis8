@@ -178,7 +178,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     function renderContentObjects(contentObject) {
         switch (contentObject.type) {
             case "title":
-                return (<h2 className={'text-5xl mb-4'}>{contentObject.text}</h2>);
+                return (<h2 className={'text-5xl'}>{contentObject.text}</h2>);
             case "text":
                 return (<p>
                     {contentObject.text}
@@ -213,7 +213,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
 
                 <Tabs tabNameList={tabList.map((item,index) => { return {'name': item.name, index}})} onTabChange={onTabChange}/>
 
-                <div className={'detail-container-inner'}>
+                <div className={'detail-container-inner p-4 md:p-8'}>
                     {contentObject.map((item, id) => (
                             <div key={id} className={'my-0'}>
                                 {renderContentObjects(item)}
