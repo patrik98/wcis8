@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState, useRef} from 'react';
 import './DetailView.scss';
 import Cloud from "./Cloud";
 import Section1 from './mini8Assets/WCIS8_section1.svg';
@@ -16,6 +16,8 @@ import Video from "./Video";
 
 
 function DetailView({detailViewKey, onResetZoom, content}) {
+    const video = useRef();
+
     const [tabList, setTabList] = useState([
         {
             "name": "Tab 1",
@@ -148,6 +150,8 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     }, [detailViewKey])
 
     const onBackButtonClick = () => {
+        video.current.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
         onResetZoom()
     }
 
@@ -184,7 +188,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                     {contentObject.text}
                 </p>);
             case "video":
-                return (<Video content={contentObject} />);
+                return (<Video content={contentObject} refHolder={video} />);
             case "image":
                 return (<Image content={contentObject} />);
             case "wordCloud":
@@ -199,7 +203,6 @@ function DetailView({detailViewKey, onResetZoom, content}) {
                 return null;
         }
     }
-
 
     return (
         <Fragment>
