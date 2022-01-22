@@ -150,8 +150,9 @@ function DetailView({detailViewKey, onResetZoom, content}) {
     }, [detailViewKey])
 
     const onBackButtonClick = () => {
-        video.current.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-
+        if (video.current) {
+            video.current.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
         onResetZoom()
     }
 
