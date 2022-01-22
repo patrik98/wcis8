@@ -1,52 +1,70 @@
 {
-  "labels" : {
+  "labels": {
     "rightCircle": {
-      "settings":  {
+      "settings": {
         "top": {
           "lines": [
             "Strategic",
             "Management"
           ],
-          "pos": [446.5, -50]
+          "pos": [
+            446.5,
+            -50
+          ]
         },
         "center": {
           "lines": [
             "Web-based",
             "Systems"
           ],
-          "pos": [446.5, 175]
+          "pos": [
+            446.5,
+            175
+          ]
         },
         "bottom": {
           "lines": [
             "Scientific",
             "Foundation"
           ],
-          "pos": [446.5, 410]
+          "pos": [
+            446.5,
+            410
+          ]
         }
       }
     },
     "leftCircle": {
-      "settings":  {
+      "settings": {
         "top": {
           "lines": [
             "Project",
             "Management"
           ],
-          "pos": [203.5, -50]
+          "pos": [
+            203.5,
+            -50
+          ]
         },
         "center": {
           "lines": [
             "Development &",
             "Engineering"
           ],
-          "pos": [203.5, 175]
+          "pos": [
+            203.5,
+            175
+          ]
         },
         "bottom": {
           "lines": [
             "Practical",
             "Application"
           ],
-          "pos": [203.5, 410]
+          "pos": [
+            203.5,
+            410
+          ]
         }
       }
     }
@@ -54,7 +72,10 @@
   "sections": {
     "leftTop": {
       "settings": {
-        "pos": [203.5, 90],
+        "pos": [
+          203.5,
+          90
+        ],
         "title": "Coding",
         "icon": {
           "path": "./icons/Coding.svg"
@@ -62,7 +83,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -127,7 +148,7 @@
                 },
                 {
                   "text": "USA",
-                  "weight":6
+                  "weight": 6
                 },
                 {
                   "text": "Kanada",
@@ -150,7 +171,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
@@ -179,7 +200,10 @@
     },
     "leftLeft": {
       "settings": {
-        "pos": [81, 200],
+        "pos": [
+          81,
+          200
+        ],
         "title": "DevOps",
         "icon": {
           "path": "./icons/DevOps.svg"
@@ -187,7 +211,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -226,7 +250,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
@@ -278,7 +302,10 @@
     },
     "leftBottom": {
       "settings": {
-        "pos": [203.5, 325],
+        "pos": [
+          203.5,
+          325
+        ],
         "title": "SW ENG",
         "icon": {
           "path": "./icons/AdvancedSE.svg"
@@ -286,7 +313,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -325,7 +352,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
@@ -354,7 +381,10 @@
     },
     "middle": {
       "settings": {
-        "pos": [0,0],
+        "pos": [
+          0,
+          0
+        ],
         "title": "",
         "icon": {
           "path": ""
@@ -362,7 +392,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -401,7 +431,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
@@ -430,7 +460,10 @@
     },
     "rightTop": {
       "settings": {
-        "pos": [446.5, 90],
+        "pos": [
+          446.5,
+          90
+        ],
         "title": "VR/AR",
         "icon": {
           "path": "./icons/VRAR.svg"
@@ -438,96 +471,161 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Überblick",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "Lorem Ipsum ..."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/200/300",
-              "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
+              "text": "Überblick"
             },
             {
               "type": "wordCloud",
               "wordList": [
                 {
-                  "text": "eins",
-                  "weight": 1
+                  "text": "Mixed Reality - Intelligent & Adaptive Systems",
+                  "weight": 4
                 },
                 {
-                  "text": "zwei",
+                  "text": "Wahrnehmung",
+                  "weight": 4
+                },
+                {
+                  "text": "Interaktion",
+                  "weight": 4
+                },
+                {
+                  "text": "3D",
+                  "weight": 4
+                },
+                {
+                  "text": "Argumented Reality",
+                  "weight": 4
+                },
+                {
+                  "text": "Technologien",
+                  "weight": 4
+                },
+                {
+                  "text": "Virtual Reality",
+                  "weight": 4
+                },
+                {
+                  "text": "multi-sensory",
+                  "weight": 3
+                },
+                {
+                  "text": "Embedded Intelligence",
+                  "weight": 3
+                },
+                {
+                  "text": "VR-Brille",
+                  "weight": 3
+                },
+                {
+                  "text": "Informationsvermittlung",
+                  "weight": 3
+                },
+                {
+                  "text": "Immersion",
+                  "weight": 3
+                },
+                {
+                  "text": "physische Realität und virtuelle Objekte",
+                  "weight": 3
+                },
+                {
+                  "text": "nutzerzentrierte Sicht",
+                  "weight": 3
+                },
+                {
+                  "text": "Digitalisierung",
                   "weight": 2
                 },
                 {
-                  "text": "drei",
-                  "weight": 3
+                  "text": "hand-tracking",
+                  "weight": 2
+                },
+                {
+                  "text": "Software",
+                  "weight": 2
+                },
+                {
+                  "text": "problemlösende Systeme",
+                  "weight": 2
+                },
+                {
+                  "text": "eye-tracking",
+                  "weight": 2
+                },
+                {
+                  "text": "3D-Hologramme",
+                  "weight": 2
+                },
+                {
+                  "text": "Deep-Learning",
+                  "weight": 2
+                },
+                {
+                  "text": "Visualisierung",
+                  "weight": 1
+                },
+                {
+                  "text": "Sensorik",
+                  "weight": 1
+                },
+                {
+                  "text": "Robotik",
+                  "weight": 1
+                },
+                {
+                  "text": "HoloLens",
+                  "weight": 1
+                },
+                {
+                  "text": "Tablet",
+                  "weight": 1
+                },
+                {
+                  "text": "computergenergierte Wirklichkeit",
+                  "weight": 1
                 }
               ]
             }
           ]
         },
         {
-          "name": "Details IMG",
+          "name": "Details",
           "content": [
             {
+              "type": "title",
+              "text": "Details"
+            },
+            {
               "type": "twoColumn",
-              "textLeft": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
-              "textRight": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
+              "textLeft": "<p>Mixed Reality (MR) ist die Verschmelzung der realen und der virtuellen Welt, um neue Umgebungen und Visualisierungen zu schaffen, in denen physische und digitale Objekte nebeneinander existieren und in Echtzeit interagieren. Mixed Reality findet weder ausschließlich in der physischen noch in der virtuellen Welt statt, sondern ist eine Mischung aus realer und virtueller Realität. </p><p> MR hängt stark von der sich entwickelnden Beziehung zwischen Mensch und Maschine ab. Um effektiv zu arbeiten, muss eine MR-Lösung in der Lage sein, die verschiedenen Aktionen einer Person in einem bestimmten Raum sowie die umgebende Landschaft zu verstehen.</p><p>Es werden eine Reihe von Kameras, Sensoren und häufig KI-gestützte Technologie genutzt, um Daten über einen Raum zu verarbeiten und diese Informationen zu nutzen, um digital erweiterte Erfahrungen zu schaffen. </p> <p>Wenn ein Nutzer beispielsweise eine Mixed-Reality-Brille aufsetzt, werden die Kameras und Sensoren in dieser Brille mit einem Softwareprogramm verbunden, das so viele Informationen über die Umgebung wie möglich sammelt und im Wesentlichen eine virtuelle Karte der realen Welt erstellt. Anhand dieser Karte kann die MR-Technologie holografische Bilder und Inhalte durch Bildprojektionen in die Welt einfügen. </p>",
+              "textRight": "<p>Die Computerverarbeitung in der Cloud, die fortschrittliche Erfassung von Eingaben und die Wahrnehmung der Umgebung ermöglichen es MR-Lösungen, die reale und die virtuelle Welt auf eine Weise zu verschmelzen, die über die Grundlagen der Augmented-Reality-Technologie hinausgeht. </p>",
               "image": {
                 "type": "image",
-                "url": "https://picsum.photos/200/300",
+                "url": "./assets/rightTop/MR_details.jpg",
                 "altText": ""
               }
             }
           ]
         },
         {
-          "name": "Details Video",
-          "content": [
-            {
-              "type": "twoColumn",
-              "textLeft": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
-              "textRight": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>",
-              "video": {
-                "type": "video",
-                "url": "https://www.youtube.com/embed/QU6WyU9EYUM"
-              }
-            }
-          ]
-        },
-        {
-          "name":  "Tab 2",
+          "name": "Trends",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Trends"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "image",
+              "url": "/assets/rightTop/MR_details.jpg",
+              "altText": ""
+            },
+            {
+              "type": "text",
+              "text": "Lorem Ipsum ..."
             }
           ]
         }
@@ -535,7 +633,10 @@
     },
     "rightRight": {
       "settings": {
-        "pos": [565, 200],
+        "pos": [
+          565,
+          200
+        ],
         "title": "E-Biz",
         "icon": {
           "path": "./icons/E-Biz.svg"
@@ -543,7 +644,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -582,7 +683,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
@@ -611,7 +712,10 @@
     },
     "rightBottom": {
       "settings": {
-        "pos": [446.5, 325],
+        "pos": [
+          446.5,
+          325
+        ],
         "title": "Cloud",
         "icon": {
           "path": "./icons/Cloud.svg"
@@ -619,7 +723,7 @@
       },
       "tabs": [
         {
-          "name":  "Tab 1",
+          "name": "Tab 1",
           "content": [
             {
               "type": "title",
@@ -658,7 +762,7 @@
           ]
         },
         {
-          "name":  "Tab 2",
+          "name": "Tab 2",
           "content": [
             {
               "type": "title",
