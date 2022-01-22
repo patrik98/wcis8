@@ -1,3 +1,7 @@
+path[id^="section-"]:hover, .section_title:hover, image:hover {
+    cursor: pointer;
+}
+
 .cls-1 {
     fill: #cedbef;
 }
@@ -16,10 +20,6 @@
     stroke: #fff;
     stroke-miterlimit: 10;
     stroke-width: 0.25px;
-
-    &:hover {
-
-    }
 }
 
 /*.cls-3 {
