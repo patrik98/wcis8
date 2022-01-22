@@ -1,70 +1,231 @@
-# Getting Started with Create React App
+# WCIS-8 ReadMe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Ausführen der Anwendung
 
-## Available Scripts
+- `yarn build` baut die Anwendung im `build` auf
+- `yarn start` führt die Anwendung im Developer-Modus auf Port`3000` aus
 
-In the project directory, you can run:
+## Anpassung der Inhalte in der WCIS-8
 
-### `yarn start`
+Um Anpassung in der WCIS-8 vorzunehmen müssen Bilder/Assets/Icons/Videos in `public` hinzugefügt werden und Inhalte im
+`\src\icons\content.json` vorgenommen werden.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Struktur von `public`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1) assets: Beinhaltet Assets der einzelnen Inhaltsbereiche. Die Unterordner beschreiben die Position in der WCIS8:
+    - LeftTop
+    - leftLeft
+    - leftBottom
+    - rightTop
+    - rightRight
+    - rightBottom
+3) icons: Beinhaltet Icon für die WCIS8-Bereiche
 
-### `yarn test`
+### Sectionname und Icons der Bereiche ändern
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Beispiel: ![Beispiel](documentation/changeIconUndSectionName.png)
 
-### `yarn build`
+Die WCIS-8 besteht aus insgesamt 6 Bereichen, bei denen das Icon, als auch der Name angepasst werden können.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1) Im `public\icons\`-Ordner wird das gewünschte SVG-Icon abgelegt
+2) Die weitere Anpassung erfolgt im `src\icons\content.json`-File. Wechseln sie im `content.json` zum gewählten
+   Abschnitt z.B. leftLeft.
+3) Ändern sie den `titel`
+4) Ändern sie den Pfad bei `path`für das gewünschte Icon `icons\[iconDatei]`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Beispiel: Hervohebung kann angepasst werden
+   <pre>
+   ...
+   "leftLeft": {
+      "settings": {
+         "pos": [ 81, 200],
+         "title": "DevOps",
+         "icon": {
+            "path": "./icons/DevOps.svg"
+         }
+      }
+      ...
+   }
+   </pre>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Anpassen der Labels der WCIS-8
 
-### `yarn eject`
+![tabs](documentation/labels.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Um die Bereich oberhalb, innerhalb und unterhalb der WCIS-8 der linken Hälfte und rechten Hälfter der 8 anzupassen: 
+1) Wechseln Sie zu `labels`
+2) Gehen sie in den `leftCircle` (linke Teil) oder `rightCircle` (rechter Teil)
+3) In einem der beiden Kreise können sie `top`, `center` oder `bottom` wählen, genau bei jenem bei dem Sie den Text ändern möchten.
+4) In den `lines` können sie den Text nun anpassen, indem sie das Array mit Inhalt befüllen.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<pre>
+  ...
+  "leftCircle": {
+      "settings": {
+        "top": {
+          "lines": [
+            "Project",
+            "Management"
+          ],
+          ... 
+        },...
+      }
+   ...
+</pre>
+### Anpassung der Section-Inhalte
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Tabs
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![tabs](documentation/tabs.png)
 
-## Learn More
+Ein Inhalt eines Section-Bereichs kann aus mehreren Tabs bestehen (siehe Bild). Diese Tabs können im `content.json`
+angepasst werden.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1) Wechseln Sie im `content.json` zum gewählten Abschnitt z.B. leftLeft.
+2) Beim Punkt `tabs` können Sie einzelne Tabs hinzufügen:
+   <pre>
+   ...
+   "tabs": [
+      {
+         "name": "Tab 1",
+         "content": [...]
+      }, ...
+      {
+         "name": "Tab n",
+         "content": [...]
+      }
+   ]
+   ...
+   </pre>
+3) Passen sie den Tab nun an, in dem Sie dem Tab einen Namen `name` geben und den Content (siehe nächster Abschnitt)
+   anpassen
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Inhaltea für einen Tab wählen
 
-### Code Splitting
+Im Bereich des contents können für einen Tab unterschiedliche Möglichkeiten gewählt und gemeinsam genutzt werden werden.
+Um die gewählte Möglichkeit festzulegen ändern Sie den `type` zu
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **title**: erzeugen eine Überschrift
+- **text**: ein einspaltiger Text kann hinzugefügt werden
+- **twoColumn**: ein zweispaltiger Text kann hinzugefügt werden
+- **image**: hinzufügen eines Bildes aus dem `public\assets\[inhaltsbereich]\`
+- **video**: hinzufügen eines Videos aus dem `public\assets\[inhaltsbereich]\`
+- **wordCloud**: hinzufügen einer Text-Wolke
 
-### Analyzing the Bundle Size
+Ein Beispiel bei dem ein Content aus **Titel, Bild und Text** besteht kann wie folgt hinzugefügt werden:
+   <pre>
+   ...
+    "content": [
+            {
+                "type": "title",
+                "text": "Trends"
+            },
+            {
+                "type": "image",
+                "url": "/assets/rightTop/MR_details.jpg",
+                "altText": ""
+            },
+            {
+                "type": "text",
+                "text": "Lorem Ipsum ..."
+            }
+        ]
+   ...
+   </pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### type `titel`
 
-### Making a Progressive Web App
+![Beispiel](documentation/titel.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Bei `text` passen sie den Überschrift-Text an.
+<pre>
+"content": [
+   {
+      "type": "title",
+      "text": "Details"
+   },...
+]
+</pre>
 
-### Advanced Configuration
+##### type`text`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Bei `text` (nicht verwechseln mit type) passen sie den Abschnitts-Text an.
+<pre>
+"content": [
+   {
+      "type": "text",
+      "text": "Lorem ipsum..."
+   },...
+]
+</pre>
 
-### Deployment
+##### type`twoColumns`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Beispiel](documentation/twoColumns.png)
 
-### `yarn build` fails to minify
+Bei `textLeft` und `textRight` passen Sie den Text der zwei Spalten an. Ein Bild kann über 'image' hinzugefügt werden.
+<pre>
+"content": [
+   {
+      "type": "twoColumn",
+      "textLeft": "Lorem ...", 
+      "textRight": "ixed Reality 2 ...",
+      "image": {...}
+   },...
+]
+</pre>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### type`image`
+
+Hier müssen sie die `url` anpassen (`public\assets\[inhaltsbereich]\`) und können einen `alt`-Text angeben.
+<pre>
+"content": [
+   {
+      "type": "image",
+      "url": "/assets/rightTop/MR_details.jpg",
+      "altText": ""
+   },... 
+]
+</pre>
+
+##### type`video`
+
+Hier müssen sie die `url` anpassen, indem sie einen Youtube-Link angeben.
+<pre>
+"content": [
+   {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/QU6WyU9EYUM"
+   },... 
+]
+</pre>
+
+##### type`wordList`
+
+![Beispiel](documentation/wordCloud.png)
+
+Eine Wort-Wolke besteht aus einer `wordListe`, welche ein Array von einzelnen Elementen beinhaltet. Ein Element wiederum
+wird durch seinen Inhalt `text` und einem Gewicht `weight`beschrieben. Das Gewicht ist eine natürliche Zahl und sollte
+zwischen 1 und 5 gewählt werden. Umso größer das Gewicht, umso größer wird das Element dargestellt.
+<pre>
+"content": [
+   "type": "wordCloud",
+      "wordList": [
+         {
+            "text": "eins",
+            "weight": 1
+         },
+         {
+            "text": "zwei",
+            "weight": 2
+         },
+         {
+            "text": "drei",
+            "weight": 3
+         }
+      ]
+]
+</pre>
+
+
+
