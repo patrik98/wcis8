@@ -50,10 +50,6 @@ function WCIS8({viewBox, onResetZoom, content}) {
 
     return (
         <Fragment>
-            <path id="Background" className="cls-1"
-                  d="M540.79,94.57a202.12,202.12,0,0,0-119.85,39.17A202.07,202.07,0,0,0,301.1,94.57C189,94.57,98,185.49,98,297.64S189,500.71,301.1,500.71a202.07,202.07,0,0,0,119.84-39.17,202.12,202.12,0,0,0,119.85,39.17c112.15,0,203.07-90.92,203.07-203.07S652.94,94.57,540.79,94.57Z"
-                  transform="translate(-98.03 -94.57)"/>
-
             <CircleTitle content={content.labels.leftCircle.settings.top} css_class={'top'}></CircleTitle>
             <CircleTitle content={content.labels.leftCircle.settings.center} css_class={'center'}></CircleTitle>
             <CircleTitle content={content.labels.leftCircle.settings.bottom} css_class={'bottom'}></CircleTitle>
