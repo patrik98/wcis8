@@ -91,7 +91,7 @@
             },
             {
               "type": "text",
-              "text": "Lorem Ipsum ..."
+              "text": "<p>Lorem Ipsum ...</p>"
             },
             {
               "type": "image",
@@ -219,7 +219,7 @@
             },
             {
               "type": "text",
-              "text": "Lorem Ipsum ..."
+              "text": "<p>Lorem Ipsum ...</p>"
             },
             {
               "type": "image",
@@ -359,67 +359,41 @@
       },
       "tabs": [
         {
-          "name": "Tab 1",
+          "name": "Übersicht",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Übersicht"
             },
             {
               "type": "text",
-              "text": "Lorem Ipsum ..."
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/200/300",
-              "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/QU6WyU9EYUM"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "text": "<p>Die beiden Schwerpunkte des WCIS-Masterprogramms (\"Development & Engineering\" und \"Web-based Systems\") zeichnen sich durch eine iterative und symbiotische Verbindung aus, bei der Prozesse, Methoden, Technologien und Anwendungen ineinandergreifen und sich wechselseitig ergänzen. Dies symbolisiert die \"liegende Acht\", die als mathematisches Symbol auch die Unendlichkeit repräsentiert. Die Absolvent:innen des Studiengangs sind sich dieser Wirkprinzipien bewusst und können dadurch den Prozess der digitalen Tranformation in kreativer und innovativer Weise gestalten.</p>"
             }
           ]
         },
         {
-          "name": "Tab 2",
+          "name": "Projekt & Strategie",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Projektmanagement und strategisches Management"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "text",
+              "text": "<h3>\"Project Management\" and \"Strategic Management\"</h3><p>In der Führung der gestalterischen Prozesse lernen die Studierenden sowohl die kurzfristigen, zielorientierten Methoden des modernen Projektmanagements kennen, also auch die mittel- und langfristigen Methoden des strategischen Managements, die durch die zunehmende Durchdringung fast aller Wirtschaftsbereiche mit digitalen Lösungen immer wichtiger wird. Die richtige Weichenstellung, z.B. durch die Wahl der richtigen Strategien ist hierbei entscheidend um Lösungen zu erstellen, die einen nachhaltigen und ökonomisch effektiven Lebenszyklus haben.</p>"
+            }
+          ]
+        },
+        {
+          "name": "Praxis & Wissenschaft",
+          "content": [
+            {
+              "type": "title",
+              "text": "Praktische Anwendung und wissenschaftliche Fundierung"
+            },
+            {
+              "type": "text",
+              "text": "<h3>\"Practical Application\" and \"Scientific Foundation\"</h3><p>Kern des anwendungsorientierten Masters ist eine praxisnahe Ausbildung anhand von aktuellen und praxisrelevanten Technologien und Anwendungen. Gleichzeitig ist es das Kennzeichen dieser Masterausbildung, die Studierenden zu kritisch hinterfragenden Persönlichkeiten weiter zu entwicklen, um auch Innovationen jenseits des aktuellen Stands der Technik zu ermöglichen und im Sinne der wissenschaftlichen Systematik eine beständige Neugier und Wissbegierde zu fördern. </p>"
             }
           ]
         }
@@ -592,7 +566,7 @@
             },
             {
               "type": "text",
-              "text": "Lorem Ipsum ..."
+              "text": "<p>Lorem Ipsum ...</p>"
             }
           ]
         }

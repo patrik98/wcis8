@@ -185,9 +185,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
             case "title":
                 return (<h2 className={'text-5xl'}>{contentObject.text}</h2>);
             case "text":
-                return (<p>
-                    {contentObject.text}
-                </p>);
+                return (<div dangerouslySetInnerHTML={{ __html: contentObject.text }} />);
             case "video":
                 return (<Video content={contentObject} refHolder={video} />);
             case "image":
