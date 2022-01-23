@@ -644,67 +644,33 @@
       },
       "tabs": [
         {
-          "name": "Tab 1",
+          "name":  "Überblick",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "Lorem Ipsum ..."
-            },
-            {
+              "text": "Überblick"
+            }, {
               "type": "image",
-              "url": "https://picsum.photos/200/300",
+              "url": "./assets/rightRight/e-biz-overview-de.png",
               "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
             }
           ]
         },
         {
-          "name": "Tab 2",
+          "name":  "Details",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Details"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "twoColumn",
+              "textLeft": "<h3>Elektronische Märkte</h3><p>Die Studierenden lernen die Unterschiede zwischen traditionellen und digitalen Geschäftsmodellen kennen. Die digitalen Märkte werden in ihrer Funktionsweise erschlossen und es werden Schlüsseltechnologien vorgestellt, die die Studierenden bewerten und ebenso einsetzen können.</p><p>Durch die digitale Transformation im Handel ist es wichtig sich mit den Trends des E-Commerce vertraut zu machen, um den Kunden und Kundinnen einen neuen Mehrwert in Sachen User Experience beim Online-Einkauf geben zu können. Hier lernen die Studierenden, wie man Infrastrukturen für ein E-Business aufbaut und gestaltet. Dabei geht es nicht nur um das Frontend, sondern auch um die Gestaltung des Backend, das ebenfalls wichtiger Bestandteil eines gut funktionierenden Online-Shops ist.</p><p>Des Weiteren werden Studieninhalte vermittelt, die sich mit den E-Business Frameworks beschäftigen, unter anderem E-Commerce-Systeme, die sich bereits etabliert haben und aus vielen Online-Shops nicht mehr wegzudenken sind, da sie in Ihrer Handhabung flexibel und individuell anpassbar sind. Um sich am hart umkämpften E-Business Markt zu etablieren, sollten auch immer die neuesten E-Commerce Trends berücksichtigt werden, die während des Studienganges vermittelt und näher vorstellt werden.</p>",
+              "textRight": "<h3>Content Systeme</h3><p>Die AbsolventInnen besitzen einen fundierten Überblick über die betriebswirtschaftlichen Tätigkeiten im Bereich des Informationsmanagements und kennen die unterschiedlichen Ausprägungen von Content Management Systemen in der Praxis (Enterprise-CMS, Web-CMS, Redaktionssysteme, usw.). Basierend auf diesem fundierten Überblick sind die AbsolventInnen in der Lage, verfügbare Systeme zu analysieren und zu klassifizieren und für den jeweilig eigenen Bedarf einzusetzen.</p>",
+              "video": {
+                "type": "video",
+                "url": "https://www.youtube.com/watch?v=cnmjae8DBe0"
+              }
             }
           ]
         }
