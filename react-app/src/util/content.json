@@ -306,74 +306,41 @@
           203.5,
           325
         ],
-        "title": "SW ENG",
+        "title": "Engineering",
         "icon": {
           "path": "./icons/AdvancedSE.svg"
         }
       },
       "tabs": [
         {
-          "name": "Tab 1",
+          "name":  "Überblick",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "Lorem Ipsum ..."
-            },
-            {
+              "text": "Überblick"
+            }, {
               "type": "image",
-              "url": "https://picsum.photos/200/300",
+              "url": "./assets/leftBottom/advanced-software-engineering-de.png",
               "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
             }
           ]
         },
         {
-          "name": "Tab 2",
+          "name":  "Details",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Details"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "twoColumn",
+              "textLeft": "<p>Software-Engineering ist die systematische Anwendung ingenieurwissenschaftlicher Ansätze bei der Entwicklung von Software. Ein Software-Ingenieur ist eine Person, die die Grundsätze der Softwaretechnik anwendet, um Computersoftware zu entwerfen, zu entwickeln, zu warten, zu testen und zu bewerten.</p><p>Software Engineering bezeichnet üblicherweise die Softwaretechnik. Dieser Bereich umfasst vor allem jene Aspekte, die sich mit der Planung, Entwicklung sowie der Anwendung und Instandhaltung von Software befassen. Dabei kommen insbesondere wissenschaftliche Einsichten zum Einsatz, um effiziente und zuverlässig funktionierende Software unter wirtschaftlichen Gesichtspunkten herzustellen.</p><p>Damit gehen zahlreiche Teilgebiete in das Software Engineering ein. Gemeinsam steuern diese Teilbereiche zur konkreten Softwareentwicklung bei. Diese Teilbereiche beinhalten grundsätzlich die Softwareentwicklung, das Projektmanagement, die Softwarequalitätssicherung sowie die Softwaretechnologie. Daneben lassen sich weitere Bereiche ausmachen, die der Softwaretechnik angehören.</p>",
+              "textRight": "<p>Innerhalb des Software Engineerings werden sowohl technisch als auch betriebswirtschaftlich orientierte Fragestellungen bearbeitet. Aufgrund der vielfältigen Struktur des Arbeitsfeldes, besteht das grundlegende Ziel der Softwaretechnik darin, eine Qualitätssoftware herzustellen. Bestimmte Prinzipien, Methoden und Werkzeuge tragen zusätzlich dazu bei, die Problemkomplexität zu reduzieren.</p><p>Im Laufe des Studiums werden viele interessante Themen des Advanced Software Engineerings behandelt. Die Hauptthemenbereiche sind Requirements Engineering, Architektur, Design und Software Engineering (Automation).  \n\nJeder dieser Bereiche ist im Produktentwicklungsprozess wichtig und eine ausgewogene Kombination all dieser Bereiche ist entscheidend um qualitativ hochwertige Software zu entwerfen.</p>",
+              "image": {
+                "type": "image",
+                "url": "./assets/leftBottom/engineering-details.png",
+                "altText": ""
+              }
             }
           ]
         }
@@ -666,7 +633,8 @@
             {
               "type": "twoColumn",
               "textLeft": "<h3>Elektronische Märkte</h3><p>Die Studierenden lernen die Unterschiede zwischen traditionellen und digitalen Geschäftsmodellen kennen. Die digitalen Märkte werden in ihrer Funktionsweise erschlossen und es werden einschlägige Schlüsseltechnologien vorgestellt, welche die Studierenden bewerten und einsetzen lernen.</p><p>Die digitale Transformation in vielen Bereichen der Wirtschaft macht es notwendig sich mit den Trends des E-Business vertraut zu machen, um den Kund:innen einen neuen Mehrwert im Hinblick auf User Experience beim Online-Einkauf geben zu können. Hier lernen die Studierenden, wie man Infrastrukturen für ein E-Business aufbaut und gestaltet. Dabei geht es nicht nur um das Frontend, sondern auch um die Gestaltung des Backend, das ebenfalls wichtiger Bestandteil eines gut funktionierenden Online-Shops ist.</p><p>Des Weiteren werden Studieninhalte vermittelt, die sich mit den E-Business Frameworks beschäftigen, die sich bereits etabliert haben und aus vielen Online-Shops nicht mehr wegzudenken sind, da sie in ihrer Handhabung flexibel und individuell anpassbar sind. Um sich am hart umkämpften E-Business Markt zu etablieren, werden die aktuellen E-Commerce Trends berücksichtigt und in der Lehrveranstaltung diskutiert.</p>",
-              "textRight": "<h3>Content Systeme </h3><p>Die AbsolventInnen erwerben einen fundierten Überblick über die betriebswirtschaftlichen Tätigkeiten im Bereich von Content Management Systemen und lernen die Systeme und deren Anwendungsfälle in der Praxis kennen (Enterprise-CMS, Web-CMS, Redaktionssysteme, usw.). Basierend auf diesem fundierten Überblick sind die AbsolventInnen in der Lage, verfügbare Systeme zu analysieren und zu klassifizieren und für den jeweilig eigenen Bedarf einzusetzen.</p><p>Darüber hinaus werden die Konzepte der digital gestützten Zusammenarbeit thematisiert und entlang der Dimensionen Kommunikation, Koordination und Kollaboration besprochen. Aufbauend werden typische Anwendungsfälle und unterstützende web-basierte Systeme besprochen und deren Auswirkungen als sozio-technische Systeme diskutiert.</p>",              "video": {
+              "textRight": "<h3>Content Systeme </h3><p>Die AbsolventInnen erwerben einen fundierten Überblick über die betriebswirtschaftlichen Tätigkeiten im Bereich von Content Management Systemen und lernen die Systeme und deren Anwendungsfälle in der Praxis kennen (Enterprise-CMS, Web-CMS, Redaktionssysteme, usw.). Basierend auf diesem fundierten Überblick sind die AbsolventInnen in der Lage, verfügbare Systeme zu analysieren und zu klassifizieren und für den jeweilig eigenen Bedarf einzusetzen.</p><p>Darüber hinaus werden die Konzepte der digital gestützten Zusammenarbeit thematisiert und entlang der Dimensionen Kommunikation, Koordination und Kollaboration besprochen. Aufbauend werden typische Anwendungsfälle und unterstützende web-basierte Systeme besprochen und deren Auswirkungen als sozio-technische Systeme diskutiert.</p>",
+              "video": {
                 "type": "video",
                 "url": "https://www.youtube.com/watch?v=cnmjae8DBe0"
               }
