@@ -602,7 +602,7 @@
             {
               "type": "twoColumn",
               "textLeft": "<p>Mixed Reality (MR) ist die Verschmelzung der realen und der virtuellen Welt, um neue Umgebungen und Visualisierungen zu schaffen, in denen physische und digitale Objekte nebeneinander existieren und in Echtzeit interagieren. Mixed Reality findet weder ausschließlich in der physischen noch in der virtuellen Welt statt, sondern ist eine Mischung aus realer und virtueller Realität. </p><p> MR hängt stark von der sich entwickelnden Beziehung zwischen Mensch und Maschine ab. Um effektiv zu arbeiten, muss eine MR-Lösung in der Lage sein, die verschiedenen Aktionen einer Person in einem bestimmten Raum sowie die umgebende Landschaft zu verstehen.</p><p>Es werden eine Reihe von Kameras, Sensoren und häufig KI-gestützte Technologie genutzt, um Daten über einen Raum zu verarbeiten und diese Informationen zu nutzen, um digital erweiterte Erfahrungen zu schaffen. </p> <p>Wenn ein Nutzer beispielsweise eine Mixed-Reality-Brille aufsetzt, werden die Kameras und Sensoren in dieser Brille mit einem Softwareprogramm verbunden, das so viele Informationen über die Umgebung wie möglich sammelt und im Wesentlichen eine virtuelle Karte der realen Welt erstellt. Anhand dieser Karte kann die MR-Technologie holografische Bilder und Inhalte durch Bildprojektionen in die Welt einfügen. </p>",
-              "textRight": "<p>Die Computerverarbeitung in der Cloud, die fortschrittliche Erfassung von Eingaben und die Wahrnehmung der Umgebung ermöglichen es MR-Lösungen, die reale und die virtuelle Welt auf eine Weise zu verschmelzen, die über die Grundlagen der Augmented-Reality-Technologie hinausgeht. </p>",
+              "textRight": "<p>Die Computerverarbeitung in der Cloud, die fortschrittliche Erfassung von Eingaben und die Wahrnehmung der Umgebung ermöglichen es MR-Lösungen, die reale und die virtuelle Welt auf eine Weise zu verschmelzen, die über die Grundlagen der Augmented-Reality-Technologie hinausgeht.</p><p>Studierende lernen die grundlegenden Konzepte in diesem Bereich kennen (AR, VR, MR) und erkunden die Möglichkeiten der Technologien anhand einfacher, praxisnaher Anwendungsbeispiele.</p>",
               "image": {
                 "type": "image",
                 "url": "./assets/rightTop/MR_details.jpg",
@@ -665,9 +665,8 @@
             },
             {
               "type": "twoColumn",
-              "textLeft": "<h3>Elektronische Märkte</h3><p>Die Studierenden lernen die Unterschiede zwischen traditionellen und digitalen Geschäftsmodellen kennen. Die digitalen Märkte werden in ihrer Funktionsweise erschlossen und es werden Schlüsseltechnologien vorgestellt, die die Studierenden bewerten und ebenso einsetzen können.</p><p>Durch die digitale Transformation im Handel ist es wichtig sich mit den Trends des E-Commerce vertraut zu machen, um den Kunden und Kundinnen einen neuen Mehrwert in Sachen User Experience beim Online-Einkauf geben zu können. Hier lernen die Studierenden, wie man Infrastrukturen für ein E-Business aufbaut und gestaltet. Dabei geht es nicht nur um das Frontend, sondern auch um die Gestaltung des Backend, das ebenfalls wichtiger Bestandteil eines gut funktionierenden Online-Shops ist.</p><p>Des Weiteren werden Studieninhalte vermittelt, die sich mit den E-Business Frameworks beschäftigen, unter anderem E-Commerce-Systeme, die sich bereits etabliert haben und aus vielen Online-Shops nicht mehr wegzudenken sind, da sie in Ihrer Handhabung flexibel und individuell anpassbar sind. Um sich am hart umkämpften E-Business Markt zu etablieren, sollten auch immer die neuesten E-Commerce Trends berücksichtigt werden, die während des Studienganges vermittelt und näher vorstellt werden.</p>",
-              "textRight": "<h3>Content Systeme</h3><p>Die AbsolventInnen besitzen einen fundierten Überblick über die betriebswirtschaftlichen Tätigkeiten im Bereich des Informationsmanagements und kennen die unterschiedlichen Ausprägungen von Content Management Systemen in der Praxis (Enterprise-CMS, Web-CMS, Redaktionssysteme, usw.). Basierend auf diesem fundierten Überblick sind die AbsolventInnen in der Lage, verfügbare Systeme zu analysieren und zu klassifizieren und für den jeweilig eigenen Bedarf einzusetzen.</p>",
-              "video": {
+              "textLeft": "<h3>Elektronische Märkte</h3><p>Die Studierenden lernen die Unterschiede zwischen traditionellen und digitalen Geschäftsmodellen kennen. Die digitalen Märkte werden in ihrer Funktionsweise erschlossen und es werden einschlägige Schlüsseltechnologien vorgestellt, welche die Studierenden bewerten und einsetzen lernen.</p><p>Die digitale Transformation in vielen Bereichen der Wirtschaft macht es notwendig sich mit den Trends des E-Business vertraut zu machen, um den Kund:innen einen neuen Mehrwert im Hinblick auf User Experience beim Online-Einkauf geben zu können. Hier lernen die Studierenden, wie man Infrastrukturen für ein E-Business aufbaut und gestaltet. Dabei geht es nicht nur um das Frontend, sondern auch um die Gestaltung des Backend, das ebenfalls wichtiger Bestandteil eines gut funktionierenden Online-Shops ist.</p><p>Des Weiteren werden Studieninhalte vermittelt, die sich mit den E-Business Frameworks beschäftigen, die sich bereits etabliert haben und aus vielen Online-Shops nicht mehr wegzudenken sind, da sie in ihrer Handhabung flexibel und individuell anpassbar sind. Um sich am hart umkämpften E-Business Markt zu etablieren, werden die aktuellen E-Commerce Trends berücksichtigt und in der Lehrveranstaltung diskutiert.</p>",
+              "textRight": "<h3>Content Systeme </h3><p>Die AbsolventInnen erwerben einen fundierten Überblick über die betriebswirtschaftlichen Tätigkeiten im Bereich von Content Management Systemen und lernen die Systeme und deren Anwendungsfälle in der Praxis kennen (Enterprise-CMS, Web-CMS, Redaktionssysteme, usw.). Basierend auf diesem fundierten Überblick sind die AbsolventInnen in der Lage, verfügbare Systeme zu analysieren und zu klassifizieren und für den jeweilig eigenen Bedarf einzusetzen.</p><p>Darüber hinaus werden die Konzepte der digital gestützten Zusammenarbeit thematisiert und entlang der Dimensionen Kommunikation, Koordination und Kollaboration besprochen. Aufbauend werden typische Anwendungsfälle und unterstützende web-basierte Systeme besprochen und deren Auswirkungen als sozio-technische Systeme diskutiert.</p>",              "video": {
                 "type": "video",
                 "url": "https://www.youtube.com/watch?v=cnmjae8DBe0"
               }
@@ -689,67 +688,34 @@
       },
       "tabs": [
         {
-          "name": "Tab 1",
+          "name": "Überblick",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "Lorem Ipsum ..."
+              "text": "Überblick"
             },
             {
               "type": "image",
-              "url": "https://picsum.photos/200/300",
+              "url": "./assets/rightBottom/cloud-overview-de.png",
               "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/QU6WyU9EYUM"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
             }
           ]
         },
         {
-          "name": "Tab 2",
+          "name": "Details",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Details"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "twoColumn",
+              "textLeft": "<strong>Cloudservices – Fachwissen das jedes Unternehmen heutzutage braucht</strong><p>Während des Studiengangs erwerben die Studierenden grundumfassendes Wissen über Cloud Computing und deren Konzepte wie Service Modell und Deployment Modelle. Dem hinzu werden die grundlegenden Technologien des Cloud Computing´s wie zum Beispiel Virtualisierung und Infrastrukturmanagement vermittelt.</p><p>Immer mehr Unternehmen arbeiten mit Cloud Services um diese als Speicherplatz, für zusätzliche Rechenleistung, Server oder als Anwendungssoftware zu nutzen. Die Cloud ist in dem Fall das Internet, dass schnellere Interaktionen oder flexiblere Ressourcen bereitstellen kann. Somit bietet Cloud Computing Vorteile die vielen Unternehmen Kosten sparen und das Beste an Produktivität herausholen können. Da Cloud Computing so vielseitig ist, können damit verschiedenste Verwendungen gefunden werden. Ein paar wären unter Anderem Audio- und Videoinhalte streamen, Daten analysieren, Anwendungen testen und erstellen, Daten speichern, sichern und wiederherstellen uvm.</p>",
+              "textRight": "<p>Den Studierenden werden die neuesten Entwicklungen im  Bereich Cloud Computing beigebracht und wie man diese effizient nutzen kann. Darunter fällt zum Beispiel Containerisierung und das Serverless Computing. Dem hinzu lernt man die unterschiedlichen Arten wie Öffentliches, Privates oder Hybrides Cloud Computing näher kennen.</p><p>Viele praxisnahe Aufgaben und Problemstellungen werden den Studierenden vorgestellt, damit sie währenddessen das elementare Verständnis und die Risiken des Cloud Sourcing verinnerlichen können.</p>",
+              "video": {
+                "type": "video",
+                "url": "https://www.youtube.com/watch?v=NoABtadYfxo"
+              }
             }
           ]
         }
