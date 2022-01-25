@@ -546,8 +546,8 @@
               "textRight": "<p>Die Computerverarbeitung in der Cloud, die fortschrittliche Erfassung von Eingaben und die Wahrnehmung der Umgebung ermöglichen es MR-Lösungen, die reale und die virtuelle Welt auf eine Weise zu verschmelzen, die über die Grundlagen der Augmented-Reality-Technologie hinausgeht.</p><p>Studierende lernen die grundlegenden Konzepte in diesem Bereich kennen (AR, VR, MR) und erkunden die Möglichkeiten der Technologien anhand einfacher, praxisnaher Anwendungsbeispiele.</p>",
               "image": {
                 "type": "image",
-                "url": "./assets/rightTop/MR_details.jpg",
-                "altText": ""
+                "url": "./assets/rightTop/MixedReality_details.jpg",
+                "altText": "Beispiel Mixed Reality"
               }
             }
           ]
@@ -561,12 +561,13 @@
             },
             {
               "type": "image",
-              "url": "/assets/rightTop/MR_details.jpg",
-              "altText": ""
+              "url": "/assets/rightTop/MixedReality_Trends.png",
+              "altText": "Trends am Beispiel Mixed Reality"
             },
             {
-              "type": "text",
-              "text": "<p>Lorem Ipsum ...</p>"
+              "type": "twoColumn",
+              "textLeft": "<p>Die Technologielandschaft hat sich in den letzten Jahren stark weiterentwickelt. Seit Jahrzehnten suchen wir nach Möglichkeiten, die Lücken zwischen der digitalen Welt und der physischen Realität zu schließen. Konzepte der erweiterten Realität wie 3D-Video, VR und AR haben sich über Apps, Videospiele und Online-Erlebnisse ihren Weg in den Alltag gebahnt. Im Jahr 2020 beschleunigte die Pandemie die digitale Transformation auf ein neues Niveau. Das Ergebnis war nicht nur die zunehmende Verbreitung von VR und AR, sondern auch die Entwicklung von Mixed Reality: MR.</p><p>Im Jahr 2020 beschleunigte die Pandemie die digitale Transformation auf ein neues Niveau. Das Ergebnis war nicht nur die zunehmende Verbreitung von VR und AR, sondern auch die Entwicklung von Mixed Reality: MR.</p>",
+              "textRight": "<p>Als aufsteigender Stern der immersiven Technologie vereint MR alle Vorteile von AR und VR in einem unglaublichen Erlebnis. Grundsätzlich bietet Mixed Reality viele der Vorteile anderer immersiver Technologien. Beispielsweise ist es einfacher, sich als Teil eines Teams zu fühlen, wenn man seine Kolleg:innen von Angesicht zu Angesicht sehen kann, anstatt sie durch einen Bildschirm anzustarren. Mixed Reality bringt auch mehr 3D-Inhalte an den Arbeitsplatz, so dass wir in die Details verschiedener Projekte und Ideen eintauchen können, ohne komplizierte Blaupausen, Erklärungen oder Skizzen verwenden zu müssen.</p>"
             }
           ]
         }
