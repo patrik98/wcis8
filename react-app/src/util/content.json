@@ -211,90 +211,56 @@
       },
       "tabs": [
         {
-          "name": "Tab 1",
-          "content": [
-            {
-              "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "<p>Lorem Ipsum ...</p>"
-            },
-            {
-              "type": "image",
-              "url": "https://picsum.photos/200/300",
-              "altText": ""
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/QU6WyU9EYUM"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Tab 2",
-          "content": [
-            {
-              "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Überblick",
           "content": [
             {
-              "type": "fiveColumn",
-              "col_title1": "Concept",
-              "col_title2": "Communication",
-              "col_title3": "Budget",
-              "col_title4": "Development",
-              "col_title5": "Results",
-              "text1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-              "text2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-              "text3": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-              "text4": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-              "text5": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+              "type": "title",
+              "text": "Überblick"
+            },
+            {
+              "type": "image",
+              "url": "./assets/leftLeft/devops-overview-de.png",
+              "altText": "",
+              "width": ""
+            }
+          ]
+        },
+        {
+          "name": "Details",
+          "content": [
+            {
+              "type": "title",
+              "text": "Details"
+            },
+            {
+              "type": "twoColumn",
+              "textLeft": "<p><strong>Operation & Strategic Management von Webapplikationen</strong></p><p>In der Softwaretechnik ist ein Softwareentwicklungs- prozess der Prozess der Aufteilung der Softwareentwicklungsarbeit in kleinere, parallele oder sequentielle Schritte oder Teilprozesse zur Verbesserung von Design, Produktmanagement. Er wird auch als software development life cycle (SDLC) bezeichnet. Die meisten modernen Entwicklungsprozesse können grob als agil bezeichnet werden. Andere Methoden sind etwa waterfall, Prototyping, iterative und inkrementelle Entwicklung.</p><p>Den Studierenden werden Möglichkeiten, wie das Management von Softwareprojekten mit Tools unterstützt werden kann, nähergebracht. Hierzu werden unterschiedliche Teile des Projektmanagements identifiziert (z.B. Sourcecodeverwaltung, Bugtracking, Testing, Deployment). Anschließend werden für diese Teile Tools besprochen, etwa GitLab für die Sourcecodeverwaltung oder Jenkins für CI/CD.</p><p>Zusätzlich werden Möglichkeiten vorgestellt, wie einzelne Tools miteinander verknüpft werden können, um eine bessere Übersicht während des Projekts zu erhalten, etwa eine Integration von GitLab in Mattermost.</p>",
+              "textRight": "<p>Durch Übungen werden die theoretischen Inhalte in der Praxis umgesetzt und vertieft.</p><p><strong>Key Takeaways:</strong></p><ul><li>verschiedene Projektmanagement-Werkzeuge anwenden können</li><li>Vor- und Nachteile von gängigen Tools erkennen und geeignete Tools selektieren können</li><li>Wissen wie Tools miteinander verknüpft bzw. integriert werden können</li></ul>",
               "image": {
-                "type": "img",
-                "url": "https://picsum.photos/700/150",
+                "type": "image",
+                "url": "./assets/leftLeft/devops-details.jpg",
                 "altText": ""
               }
+            }
+          ]
+        },
+        {
+          "name": "Trends",
+          "content": [
+            {
+              "type": "title",
+              "text": "Trends"
+            },
+            {
+              "type": "image",
+              "url": "./assets/leftLeft/devops-trends.png",
+              "altText": "",
+              "width": ""
+            },
+            {
+              "type": "twoColumn",
+              "textLeft": "<p><strong>Everything as Code erleichtert CloudOps und DevOps-Governance</strong></p><p>Was ist Everything as Code? Es ist keine einzelne Technologie, kein Prozess ...</p>",
+              "textRight": "<p><strong>Cloud-native application development</strong></p><p>Lorem Ipsum ...</p>"
             }
           ]
         }
