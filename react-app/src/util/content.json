@@ -199,8 +199,8 @@
             },
             {
               "type": "twoColumn",
-              "textLeft": "<p><strong>Everything as Code erleichtert CloudOps und DevOps-Governance</strong></p><p>Was ist Everything as Code? Es ist keine einzelne Technologie, kein Prozess ...</p>",
-              "textRight": "<p><strong>Cloud-native application development</strong></p><p>Lorem Ipsum ...</p>"
+              "textLeft": "<p><strong>Everything as Code erleichtert CloudOps und DevOps-Governance</strong></p><p>Was ist Everything as Code? Es ist keine einzelne Technologie, kein Prozess und kein Anbieter-Tool. </br> Vielmehr geht es darum, Aspekte des IT-Betriebs und </br> -Managements in einem kodifizierten Konfigurations- format zu definieren.</p><p>Es gibt mehrere Arten von \"Alles-als-Code\"-Ansätzen. Zu den gängigsten gehört Infrastructure as Code, welches die Bereitstellung von Cloud- oder virtuellen Infrastrukturen und Anwendungen definiert. GitOps ist ein weiterer Ansatz, bei dem die Konfiguration für den Betrieb oder die Infrastruktur als Code in einem Git-Code-Repository definiert wird. \"Everything as Code\" ersetzt Ad-hoc-Prozesse, die sich nur schwer skalieren lassen und in der Regel personelle Ressourcen und Fähigkeiten für die Wartung erfordern.</p>",
+              "textRight": "<p><strong>Cloud-native application development</strong></p><p>Angesichts des unaufhaltsamen Wachstums von Cloud-Diensten wird im nächsten Jahrzehnt fast jede Software auf die eine oder andere Art von Cloud-Dienst setzen, wobei die meiste Software explizit für Cloud-basierte Umgebungen entwickelt wird. Da die meisten Softwareentwicklungswerkzeuge und -dienste ebenfalls in die Cloud verlagert werden, wird die Software natürlich so konzipiert, dass sie in der Cloud als vollständige Online-Lösung bereitgestellt und verwaltet werden kann. In gewisser Weise ist dies bereits geschehen, doch wird sich dieser Trend mit der zunehmenden Umstellung von Software auf cloud-native Architekturen noch verstärken.</p>"
             }
           ]
         }
