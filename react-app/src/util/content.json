@@ -83,116 +83,56 @@
       },
       "tabs": [
         {
-          "name": "Tab 1",
+          "name": "Überblick",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
-            },
-            {
-              "type": "text",
-              "text": "<p>Lorem Ipsum ...</p>"
+              "text": "Überblick"
             },
             {
               "type": "image",
-              "url": "https://picsum.photos/200/300",
+              "url": "./assets/leftTop/coding-overview-de.png",
               "altText": "",
               "width": "full"
-            },
-            {
-              "type": "video",
-              "url": "https://www.youtube.com/embed/GXjyX-El1mU"
-            },
-            {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 7
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                },
-                {
-                  "text": "fünf",
-                  "weight": 5
-                },
-                {
-                  "text": "acht",
-                  "weight": 3
-                },
-                {
-                  "text": "siebzehn",
-                  "weight": 3
-                },
-                {
-                  "text": "Frankreich",
-                  "weight": 7
-                },
-                {
-                  "text": "London",
-                  "weight": 3
-                },
-                {
-                  "text": "Paris",
-                  "weight": 3
-                },
-                {
-                  "text": "Venezuela",
-                  "weight": 5
-                },
-                {
-                  "text": "USA",
-                  "weight": 6
-                },
-                {
-                  "text": "Kanada",
-                  "weight": 7
-                },
-                {
-                  "text": "Griechenland",
-                  "weight": 3
-                },
-                {
-                  "text": "Deutschland",
-                  "weight": 2
-                },
-                {
-                  "text": "Spanien",
-                  "weight": 8
-                }
-              ]
             }
           ]
         },
         {
-          "name": "Tab 2",
+          "name": "Details",
           "content": [
             {
               "type": "title",
-              "text": "Hello World"
+              "text": "Details"
             },
             {
-              "type": "wordCloud",
-              "wordList": [
-                {
-                  "text": "eins",
-                  "weight": 1
-                },
-                {
-                  "text": "zwei",
-                  "weight": 2
-                },
-                {
-                  "text": "drei",
-                  "weight": 3
-                }
-              ]
+              "type": "twoColumn",
+              "textLeft": "<p><strong>Softwareentwicklung mit web basierten Technologien.</strong></p><p>Hierzu zählen frontend-seitige wie auch backend-seitige Softwareentwicklung. Außerdem werden vertiefende Kenntnisse zur Strukturierung (HTML), Gestaltung (CSS </br>und Präprozessoren), und dynamische Aspekte (JavaScript  und TypeScript) von Web-Applikationen, wie auch deren Backend seitiger Entwicklung mit aktuellen und modernen Programmiersprachen (z.B. Node.js, Python) vermittelt.</br>Die Studierenden erhalten somit einen Überblick über die gesamte Entwicklung von Web-Applikationen.</p><p>Es werden weiterführende Inhalte wie frontend-seitige Frameworks (z.B. Stencil.js, Angular, Vue) besprochen. Darüber hinaus werden den Studierenden Methoden und Tools nähergebracht, die die Softwareentwicklung vereinfachen und die Qualität des Codes erhöhen. Hierzu zählen etwa Methoden wie Code Verwaltung, Code Formatierung, Linting, Automatisierung, Module Bundler und Paketmanagement. Zusätzlich werden den Studierenden unterschiedliche Architekturen (Client/ Server, 3 Tier Model) und Umsetzungen von Web-Applikationen (z.B. Headless) nähergebracht. Die erlernten Inhalte werden mit Übungen von den Studierenden praktisch umgesetzt und gefestigt.</p>",
+              "textRight": "<p><strong>Key Takeaways:</strong></p><ul><li>gängige Tools und Best Practices der web-basierten Softwareentwicklung</li><li>vertiefte Kenntnisse in der Programmierung und Ausgestaltung von innovativen Web-Applikationen</li><li>fundierte Kenntnis von modernen web-basierten Programmiersprachen</li><li>web basierte Technologien gezielt einsetzen und deren Vor- und Nachteile kennen</li><li>gängige Frameworks für Frontend und Backend Entwicklung und deren gezielter Einsatz</li></ul>",
+              "image": {
+                "type": "image",
+                "url": "./assets/leftTop/coding-details.jpg",
+                "altText": ""
+              }
+            }
+          ]
+        },
+        {
+          "name": "Trends",
+          "content": [
+            {
+              "type": "title",
+              "text": "Trends"
+            },
+            {
+              "type": "image",
+              "url": "./assets/leftTop/coding-trends.png",
+              "altText": "",
+              "width": ""
+            },
+            {
+              "type": "twoColumn",
+              "textLeft": "<p>Eine Technologie, die heute führend ist, kann schnell veraltet sein. Wenn wir den aktuellen Softwareentwicklungsprozess betrachten, verändern Trends die Art und Weise, wie wir Software entwickeln, bereitstellen und verwalten, sowie die Plattformen, für die wir entwickeln.</p><p><strong>Low-Code- und No-Code-Softwareentwicklung</strong></p><p>Dieses Konzept mag widersprüchlich erscheinen: Schließlich ist Coding die Grundlage der Softwareentwicklung. Die Softwareentwicklung wird </br> jedoch immer komplexer, und die Anforderung, Software immer schneller bereitzustellen steigt. Wichtig ist, dass Low-Code-</p>",
+              "textRight": "<p>und No-Code-Tools und -Plattformen niemals die eigentliche Programmierung in der Softwareentwicklung ersetzen werden - irgendjemand muss sie entwickeln.</p><p><strong>Progressive web apps</strong></p><p>Mit dem kontinuierlichen Wachstum von mobilen und webbasierten Anwendungen kann die Entwicklung und Pflege separater Anwendungen viele Ressourcen binden. Mit Progressive Web Apps können Entwickler mobile Versionen ihrer webbasierten Anwendungen mit webbasierten Sprachen wie JavaScript, CSS und HTML erstellen, die in mobilen Browsern angezeigt werden, aber dennoch eine native appähnliche Erfahrung bieten.</p>"
             }
           ]
         }
