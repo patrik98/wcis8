@@ -208,7 +208,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
             <div className={'detail-container'}>
                 <div className={'overview'}>
                         <a onClick={onBackButtonClick} type={'button'} className={''}>
-                            zurück zur
+                            zurück
                         </a>
                         {wcis8SelectedView(detailViewKey)}
                 </div>
@@ -217,7 +217,7 @@ function DetailView({detailViewKey, onResetZoom, content}) {
 
                 <div className={'detail-container-inner p-4 md:p-8'}>
                     {contentObject.map((item, id) => (
-                            <div key={id} className={'my-0'}>
+                            <div key={id} className={'mt-0 mb-12'}>
                                 {renderContentObjects(item)}
                             </div>
                         )
